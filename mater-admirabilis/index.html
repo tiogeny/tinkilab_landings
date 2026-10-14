@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinkiLab × Colegio Mater Admirabilis | Mi Primera Colección 3D (Verano 2027)</title>
+  <meta name="description" content="Propuesta de Alianza Educativa B2B: Talleres de Fabricación Digital, Impresión 3D y Emprendimiento Maker para estudiantes del Colegio Mater Admirabilis de Chorrillos.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/escudo-mater-admirabilis.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#2563EB',
+              cyan: '#06B6D4',
+              dark: '#0F172A',
+              navy: '#1E293B',
+              accent: '#8B1E28', // Granate oficial Mater Admirabilis
+              gold: '#D97706'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos de Impresión / Exportar a PDF */
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #ffffff !important; color: #000000 !important; font-size: 11pt; }
+      .print-break-inside { break-inside: avoid; page-break-inside: avoid; }
+      .print-break-before { break-before: page; page-break-before: always; }
+      .shadow-xl, .shadow-lg, .shadow-md, .shadow-2xl { box-shadow: none !important; }
+      .bg-slate-900, .bg-slate-950, .bg-slate-800 { background: #ffffff !important; color: #0f172a !important; }
+      .text-white { color: #0f172a !important; }
+      .border-slate-800, .border-slate-700 { border-color: #cbd5e1 !important; }
+      header { position: static !important; }
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #2563eb 0%, #06b6d4 50%, #8b1e28 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .badge-glow {
+      box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Top Announcement Bar / Membrete Institucional -->
+  <div class="bg-gradient-to-r from-red-950 via-slate-900 to-blue-950 border-b border-slate-800 py-2.5 px-4 text-xs font-medium text-slate-300">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+          PROPUESTA INSTITUCIONAL B2B
+        </span>
+        <span class="text-slate-400">Verano 2027 • I.E.P. Mater Admirabilis (Chorrillos, Lima)</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400 no-print">
+        <span class="flex items-center gap-1.5 text-emerald-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Proyecto Listo para Lanzamiento
+        </span>
+        <a href="#contacto" class="hover:text-white underline underline-offset-4 transition">Coordinar con TinkiLab</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar Principal -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/85 border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logos Co-branding -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <!-- Logo TinkiLab -->
+        <a href="#" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center font-display font-extrabold text-white text-xl shadow-lg shadow-blue-500/20 group-hover:scale-105 transition">
+            T
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-lg text-white tracking-tight leading-none">TinkiLab</span>
+            <span class="text-[10px] text-cyan-400 font-semibold tracking-wider uppercase">STEAM & Maker Lab</span>
+          </div>
+        </a>
+
+        <!-- Conector -->
+        <span class="text-slate-500 text-lg font-light">×</span>
+
+        <!-- Logo Colegio Mater Admirabilis -->
+        <div class="flex items-center gap-2 pl-1 border-l border-slate-800">
+          <img src="assets/images/escudo-mater-admirabilis.png" alt="Escudo Colegio Mater Admirabilis Chorrillos" class="h-11 w-auto object-contain rounded-md shadow-sm">
+          <div class="hidden md:flex flex-col">
+            <span class="font-display font-bold text-sm text-slate-100 tracking-tight leading-none">I.E.P. Mater Admirabilis</span>
+            <span class="text-[10px] text-red-400 font-medium tracking-wide">Chorrillos • Inicial y Primaria</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menú de Navegación -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#programa" class="hover:text-cyan-400 transition">El Taller Insignia</a>
+        <a href="#ruta-maker" class="hover:text-cyan-400 transition">Ruta Maker (12 Sesiones)</a>
+        <a href="#pedagogia" class="hover:text-cyan-400 transition">Competencias STEAM</a>
+        <a href="#operaciones" class="hover:text-cyan-400 transition">Operaciones & Aportes</a>
+        <a href="#calculadora" class="hover:text-cyan-400 transition text-amber-400 font-semibold flex items-center gap-1.5">
+          <span>💰</span> Simulador Colegio
+        </a>
+      </nav>
+
+      <!-- Botones de Acción -->
+      <div class="flex items-center gap-2.5 no-print">
+        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-xs font-semibold text-slate-200 border border-slate-700 transition">
+          <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+          Descargar PDF
+        </button>
+        <a href="https://wa.me/51964359899?text=Hola%20Henry,%20revisé%20la%20propuesta%20de%20TinkiLab%20para%20el%20Colegio%20Mater%20Admirabilis%20y%20me%20gustaría%20coordinar%20la%20reunión." target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-xs font-bold text-white shadow-md shadow-cyan-500/20 transition">
+          <span>Agendar Reunión</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/80">
+    <!-- Glow backgrounds -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 right-10 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 left-1/2 w-80 h-80 bg-red-900/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Columna Izquierda: Texto y Propuesta de Valor -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs font-semibold text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            Alianza de Verano 2027 • TinkiLab & Mater Admirabilis
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+            Mi Primera Colección 3D: <br>
+            <span class="gradient-text">Diseño Digital, Impresión 3D & Emprendimiento Maker</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
+            Una experiencia vacacional pionera donde los estudiantes de Chorrillos <strong>diseñan sus propios personajes en relieve</strong>, los fabrican con <strong>impresión 3D en tiempo real</strong>, crean una colección con identidad propia y la transforman en un producto tangible listo para el mercado.
+          </p>
+
+          <!-- Badges de Ficha Técnica -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 py-2">
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="block text-xs font-medium text-slate-400">Duración</span>
+              <span class="font-display font-bold text-sm text-cyan-300">6 Semanas</span>
+              <span class="block text-[10px] text-slate-500">2 sesiones / sem</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="block text-xs font-medium text-slate-400">Total Horas</span>
+              <span class="font-display font-bold text-sm text-blue-300">18 Horas</span>
+              <span class="block text-[10px] text-slate-500">12 sesiones × 90m</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="block text-xs font-medium text-slate-400">Público</span>
+              <span class="font-display font-bold text-sm text-amber-300">7 a 11 Años</span>
+              <span class="block text-[10px] text-slate-500">Primaria activa</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="block text-xs font-medium text-slate-400">Inversión Colegio</span>
+              <span class="font-display font-bold text-sm text-emerald-400">S/ 0.00</span>
+              <span class="block text-[10px] text-slate-500">Riesgo Cero</span>
+            </div>
+          </div>
+
+          <!-- Puntos Clave de Alianza -->
+          <div class="pt-2 flex flex-col sm:flex-row gap-4 items-start sm:items-center text-xs text-slate-300">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span>El colegio cobra y recibe ingresos netos por alumno</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span>TinkiLab aporta mentores, impresoras 3D y materiales</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="pt-4 flex flex-wrap gap-3.5 no-print">
+            <a href="#calculadora" class="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 font-display font-bold text-sm text-white shadow-lg shadow-cyan-500/25 transition flex items-center gap-2">
+              <span>Calcular Ingresos para Mater Admirabilis</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+            <a href="#ruta-maker" class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 font-display font-semibold text-sm text-slate-200 border border-slate-700 transition">
+              Explorar las 12 Sesiones
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Imagen del Taller y Proyectos Reales -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border-2 border-slate-700/80 shadow-2xl bg-slate-900 group">
+            <img src="assets/images/hero-coleccion-3d.jpg" alt="Niño creando y pintando su colección de personajes 3D impresos en TinkiLab" class="w-full h-auto object-cover group-hover:scale-105 transition duration-700">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <!-- Floating Badge Superior -->
+            <div class="absolute top-4 left-4 bg-slate-950/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-semibold text-white flex items-center gap-2 shadow-lg">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              Proyectos Reales en Relieve 2.5D y 3D
+            </div>
+
+            <!-- Floating Card Inferior -->
+            <div class="absolute bottom-4 left-4 right-4 bg-slate-900/95 backdrop-blur-md p-4 rounded-xl border border-slate-700 shadow-xl">
+              <div class="flex items-center justify-between text-xs font-bold text-slate-300 mb-1">
+                <span class="text-cyan-400 uppercase tracking-wider">Entregable Tangible</span>
+                <span class="text-emerald-400">100% de Alumnos se llevan su Colección</span>
+              </div>
+              <p class="text-xs text-slate-300">
+                Cada estudiante fabrica, pinta y empaqueta entre 3 y 4 piezas de autor, presentándolas en el <strong>Demo Day Final</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE IMPACTO ESTRATÉGICO PARA EL COLEGIO -->
+  <section class="py-16 bg-slate-900/60 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-12">
+        <span class="text-xs font-bold text-red-400 uppercase tracking-widest">Oportunidad Estratégica en Chorrillos</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white">
+          ¿Por qué este programa es una victoria inmediata para Mater Admirabilis?
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Una propuesta diseñada para rentabilizar la infraestructura del colegio durante las vacaciones, posicionando a la institución como referente de innovación tecnológica en el distrito.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Tarjeta 1: Diferenciación Frente a Competidores -->
+        <div class="p-6 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-cyan-500/40 transition duration-300 space-y-3 print-break-inside">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl font-bold">
+            🚀
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Diferenciación Radical</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Mientras colegios del entorno (Innova, Saco Oliveros, Trilce) ofrecen talleres deportivos tradicionales, Mater Admirabilis se adelanta con <strong>Fabricación Digital e Impresión 3D real</strong>, un programa exclusivo y de alta demanda familiar.
+          </p>
+        </div>
+
+        <!-- Tarjeta 2: Captación de Matrícula Regular 2027 -->
+        <div class="p-6 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-emerald-500/40 transition duration-300 space-y-3 print-break-inside">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl font-bold">
+            🎯
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Imán de Alumnos Nuevos</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            El taller está abierto a alumnos del colegio y a <strong>vecinos de Chorrillos</strong>. Al ingresar al plantel en enero y febrero, los padres externos conocen las instalaciones y la cultura del colegio, convirtiéndose en <strong>prospectos calificados para la matrícula escolar 2027</strong>.
+          </p>
+        </div>
+
+        <!-- Tarjeta 3: Riesgo Cero y Llave en Mano -->
+        <div class="p-6 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-amber-500/40 transition duration-300 space-y-3 print-break-inside">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl font-bold">
+            🛡️
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Ejecución "Llave en Mano"</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            El colegio no gasta en compras de impresoras, licencias ni repuestos. <strong>TinkiLab se encarga de todo el dictado técnico, el soporte de máquinas y los insumos</strong>, mientras el colegio administra las inscripciones en sus canales oficiales.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RUTA MAKER: 6 ESTACIONES EN 12 SESIONES -->
+  <section id="ruta-maker" class="py-20 relative border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+          Metodología Makerdu × TinkiLab
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          Ruta Maker: 6 Estaciones de Creación (12 Sesiones)
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Un roadmap progresivo de 18 horas lectivas donde cada 2 sesiones se supera una estación formativa, transformando una simple idea en papel en una colección de juguetes coleccionables.
+        </p>
+      </div>
+
+      <!-- Grid de las 6 Estaciones -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Estación 1: IMAGINA -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 relative group hover:border-blue-500/50 transition duration-300 print-break-inside">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">
+              Estación 01 • Sesiones 1 y 2
+            </span>
+            <span class="text-2xl">💡</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-cyan-300 transition">1. Imagina</h3>
+          <p class="text-xs text-cyan-400 font-semibold mb-3">La forma y personalidad de tu personaje en papel</p>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 font-bold">•</span>
+              <span><strong>Sesión 1:</strong> Introducción al mundo Maker y creación del concepto/historia del personaje.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 font-bold">•</span>
+              <span><strong>Sesión 2:</strong> Boceto Maker a escala: vistas frontal/perfil, siluetas y proporciones anatómicas.</span>
+            </li>
+          </ul>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+            📦 <strong>Micro-entregable:</strong> Ficha de Personaje Maker con medidas reales y concepto validado.
+          </div>
+        </div>
+
+        <!-- Estación 2: DISEÑA -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 relative group hover:border-cyan-500/50 transition duration-300 print-break-inside">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+              Estación 02 • Sesiones 3 y 4
+            </span>
+            <span class="text-2xl">✏️</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-cyan-300 transition">2. Diseña</h3>
+          <p class="text-xs text-cyan-400 font-semibold mb-3">Sus contornos y curvas digitales en la pantalla</p>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 font-bold">•</span>
+              <span><strong>Sesión 3:</strong> Digitalización: vectorización del dibujo a mano y control de nodos/curvas.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 font-bold">•</span>
+              <span><strong>Sesión 4:</strong> Criterios de diseño Makerdu: trazo cerrado, base estable y huecos amplios.</span>
+            </li>
+          </ul>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+            📦 <strong>Micro-entregable:</strong> Archivo digital SVG vectorizado con silueta continua lista para 3D.
+          </div>
+        </div>
+
+        <!-- Estación 3: MODELA -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 relative group hover:border-indigo-500/50 transition duration-300 print-break-inside">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+              Estación 03 • Sesiones 5 y 6
+            </span>
+            <span class="text-2xl">🧊</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-cyan-300 transition">3. Modela</h3>
+          <p class="text-xs text-cyan-400 font-semibold mb-3">El grosor y relieve para darle cuerpo sólido 3D</p>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 font-bold">•</span>
+              <span><strong>Sesión 5:</strong> Modelado paramétrico en Tinkercad: extrusiones, alturas de capa y relieves 2.5D.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 font-bold">•</span>
+              <span><strong>Sesión 6:</strong> Ensambles modulares, bases de exhibición y pruebas de estabilidad física.</span>
+            </li>
+          </ul>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+            📦 <strong>Micro-entregable:</strong> Modelo 3D sólido exportado en formato STL/OBJ con tolerancia geométrica.
+          </div>
+        </div>
+
+        <!-- Estación 4: IMPRIME -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 relative group hover:border-emerald-500/50 transition duration-300 print-break-inside">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+              Estación 04 • Sesiones 7 y 8
+            </span>
+            <span class="text-2xl">🖨️</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-cyan-300 transition">4. Imprime</h3>
+          <p class="text-xs text-emerald-400 font-semibold mb-3">Tu creación física capa por capa en 3D</p>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">•</span>
+              <span><strong>Sesión 7:</strong> El software laminador (Slicer): densidad, soportes y estimación de tiempo.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">•</span>
+              <span><strong>Sesión 8:</strong> Manufactura en vivo: carga de filamento PLA ecológico, calibración y supervisión.</span>
+            </li>
+          </ul>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+            📦 <strong>Micro-entregable:</strong> Personaje físico impreso en filamento PLA seguro y biodegradable.
+          </div>
+        </div>
+
+        <!-- Estación 5: DETALLA -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 relative group hover:border-purple-500/50 transition duration-300 print-break-inside">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">
+              Estación 05 • Sesiones 9 y 10
+            </span>
+            <span class="text-2xl">🎨</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-cyan-300 transition">5. Detalla</h3>
+          <p class="text-xs text-purple-400 font-semibold mb-3">Cada personaje con tus colores y pinturas favoritas</p>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-400 font-bold">•</span>
+              <span><strong>Sesión 9:</strong> Post-procesado Maker: retiro seguro de soportes y acabado de superficies.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-400 font-bold">•</span>
+              <span><strong>Sesión 10:</strong> Técnicas de pintura sobre plástico 3D: contrastes, sombras y sellado acrílico.</span>
+            </li>
+          </ul>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+            📦 <strong>Micro-entregable:</strong> Colección pintada y personalizada con acabado profesional de juguete.
+          </div>
+        </div>
+
+        <!-- Estación 6: EMPRENDE -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 relative group hover:border-amber-500/50 transition duration-300 print-break-inside">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+              Estación 06 • Sesiones 11 y 12
+            </span>
+            <span class="text-2xl">🏆</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-amber-300 transition">6. Emprende</h3>
+          <p class="text-xs text-amber-400 font-semibold mb-3">Lanzando tu primera colección de juguetes al mercado</p>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 font-bold">•</span>
+              <span><strong>Sesión 11:</strong> Packaging & Branding Maker: diseño de empaque coleccionable y tarjeta de autor.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 font-bold">•</span>
+              <span><strong>Sesión 12:</strong> <strong>Demo Day & Feria Maker:</strong> Presentación pública ante los padres de familia.</span>
+            </li>
+          </ul>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+            📦 <strong>Gran Entregable:</strong> Caja de colección completa + Certificado oficial Maker TinkiLab.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Plataforma de Desafíos & Recursos Digitales (Diferenciador Makerdu) -->
+      <div class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-blue-950/40 to-slate-900 border border-slate-800 print-break-inside">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-3">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-bold">
+              <span>💻</span> Acceso 24/7 a la Plataforma TinkiLab
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white">
+              Ecosistema Digital de Retos & Misiones en Casa
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              El aprendizaje no termina al salir del colegio. Los estudiantes tienen acceso a nuestra <strong>plataforma de desafíos</strong> con video-tutoriales paso a paso, plantillas 3D descargables y rúbricas de validación geométrica (estabilidad de base, trazo cerrado y huecos de corte). Los padres pueden monitorear el avance de las misiones en tiempo real.
+            </p>
+          </div>
+          <div class="lg:col-span-4 grid grid-cols-2 gap-3 text-center">
+            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+              <img src="assets/images/base_estable.svg" alt="Criterio Base Estable" class="w-8 h-8 mx-auto mb-1 opacity-90">
+              <span class="block text-xs font-bold text-white">Base Estable</span>
+              <span class="text-[10px] text-slate-400">Equilibrio físico</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+              <img src="assets/images/trazo_cerrado.svg" alt="Criterio Trazo Cerrado" class="w-8 h-8 mx-auto mb-1 opacity-90">
+              <span class="block text-xs font-bold text-white">Trazo Cerrado</span>
+              <span class="text-[10px] text-slate-400">Solidez de malla</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPETENCIAS PEDAGÓGICAS CNEB / STEAM -->
+  <section id="pedagogia" class="py-16 bg-slate-900/40 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-12">
+        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Alineación Curricular</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white">
+          4 Competencias Fundamentales que Desarrollan los Niños
+        </h2>
+        <p class="text-slate-400 text-sm">
+          No es un taller recreativo superficial; está alineado con las competencias de Ciencia y Tecnología, Arte y Emprendimiento del Currículo Nacional.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5 print-break-inside">
+          <div class="text-2xl">📐</div>
+          <h4 class="font-display font-bold text-base text-white">1. Pensamiento Espacial y Geometría</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Manejo de coordenadas tridimensionales (X, Y, Z), simetría, escala, vistas ortogonales y cálculo de proporciones volumétricas.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5 print-break-inside">
+          <div class="text-2xl">⚙️</div>
+          <h4 class="font-display font-bold text-base text-white">2. Lógica de Manufactura & Slicing</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Comprensión de tolerancias mecánicas, ensamble de piezas por encaje, optimización de trayectorias y comportamiento térmico de polímeros.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5 print-break-inside">
+          <div class="text-2xl">🧩</div>
+          <h4 class="font-display font-bold text-base text-white">3. Mentalidad Maker & Resiliencia</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Cultura de prototipado rápido: ver el error de impresión no como fracaso, sino como dato para iterar y perfeccionar el diseño físico.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5 print-break-inside">
+          <div class="text-2xl">💼</div>
+          <h4 class="font-display font-bold text-base text-white">4. Emprendimiento & Comunicación</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Presentación pública de proyectos (pitch), branding del producto, diseño de empaques y nociones de valor comercial de una creación propia.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OPERACIONES Y MATRIZ DE APORTES (¿QUIÉN PONE QUÉ?) -->
+  <section id="operaciones" class="py-16 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-12">
+        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">Matriz de Roles y Responsabilidades</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white">
+          Sinergia Operativa: Claridad y Cero Fricción
+        </h2>
+        <p class="text-slate-400 text-sm">
+          Todo el peso tecnológico lo absorbe TinkiLab. El colegio aprovecha su infraestructura existente sin complicaciones.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        <!-- Columna Colegio -->
+        <div class="p-8 rounded-2xl bg-slate-900/90 border-2 border-red-950/70 space-y-5 print-break-inside">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/escudo-mater-admirabilis.png" alt="Colegio" class="h-9 w-auto">
+            <div>
+              <h3 class="font-display font-bold text-lg text-white">Aporte de Mater Admirabilis</h3>
+              <span class="text-xs text-red-400 font-medium">Infraestructura y Convocatoria</span>
+            </div>
+          </div>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>Sala de cómputo del colegio</strong> con computadoras funcionales y conexión a internet (Tinkercad funciona 100% en navegador web).</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>Proyector o ecran</strong> en el aula para proyectar las demostraciones en pantalla grande.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>Difusión oficial</strong> a través de circulares, grupos de WhatsApp de padres y redes sociales del colegio.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><strong>Gestión de matrícula y cobranza</strong> mediante los canales habituales de tesorería del colegio.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna TinkiLab -->
+        <div class="p-8 rounded-2xl bg-slate-900/90 border-2 border-blue-900/70 space-y-5 print-break-inside">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center font-display font-extrabold text-white">
+              T
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-lg text-white">Aporte Integral de TinkiLab</h3>
+              <span class="text-xs text-cyan-400 font-medium">Tecnología, Pedagogía e Insumos</span>
+            </div>
+          </div>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <span class="text-cyan-400 font-bold">✓</span>
+              <span><strong>Mentores especializados</strong> con amplia experiencia en fabricación digital y pedagogía infantil STEAM.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-cyan-400 font-bold">✓</span>
+              <span><strong>Impresora(s) 3D FDM</strong> aportadas por TinkiLab para demostraciones en vivo y fabricación de piezas.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-cyan-400 font-bold">✓</span>
+              <span><strong>Todos los filamentos PLA ecológicos</strong> (biodegradables, atóxicos y certificados para uso educativo).</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-cyan-400 font-bold">✓</span>
+              <span><strong>Kit de post-procesado:</strong> pinturas acrílicas, pinceles, selladores y cajas de empaque coleccionable.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-cyan-400 font-bold">✓</span>
+              <span><strong>Plataforma virtual de retos</strong> y certificación oficial TinkiLab para cada estudiante al finalizar.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA / SIMULADOR DE INGRESOS PARA EL COLEGIO -->
+  <section id="calculadora" class="py-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-b border-slate-800 print-break-inside">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-14">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+          Simulador Económico B2B
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          Calcula los Ingresos Netos para Mater Admirabilis
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Mueve el control deslizante para simular cuántos alumnos se inscriben. Observa la rentabilidad directa del colegio con <strong>inversión de S/ 0 en equipos</strong>.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto p-6 sm:p-10 rounded-3xl bg-slate-900 border border-slate-700/80 shadow-2xl">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          
+          <!-- Controles de la calculadora -->
+          <div class="md:col-span-7 space-y-6">
+            
+            <!-- Slider Alumnos -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="alumnos-range" class="text-sm font-bold text-slate-200">
+                  Número de Alumnos Inscritos:
+                </label>
+                <span id="alumnos-count" class="font-display font-extrabold text-2xl text-cyan-400">12</span>
+              </div>
+              <input type="range" id="alumnos-range" min="6" max="24" step="1" value="12" class="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500">
+              <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                <span>6 (Mínimo piloto)</span>
+                <span>12 (1 Grupo ideal)</span>
+                <span>18</span>
+                <span>24 (2 Grupos)</span>
+              </div>
+            </div>
+
+            <!-- Selector de Precio Sugerido al Público -->
+            <div>
+              <span class="block text-xs font-semibold text-slate-400 mb-2">Precio sugerido al padre de familia (Verano 6 semanas):</span>
+              <div class="grid grid-cols-2 gap-3">
+                <label class="flex items-center gap-2 p-3 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+                  <input type="radio" name="precio" value="349" checked class="text-cyan-500 focus:ring-cyan-500">
+                  <div>
+                    <span class="block text-xs font-bold text-white">S/ 349</span>
+                    <span class="block text-[10px] text-slate-400">Precio accesible (~1 pensión)</span>
+                  </div>
+                </label>
+                <label class="flex items-center gap-2 p-3 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+                  <input type="radio" name="precio" value="380" class="text-cyan-500 focus:ring-cyan-500">
+                  <div>
+                    <span class="block text-xs font-bold text-white">S/ 380</span>
+                    <span class="block text-[10px] text-slate-400">Precio con mayor margen</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Nota de Transparencia -->
+            <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800 text-xs text-slate-400 space-y-1">
+              <div class="font-bold text-slate-300">💡 Modelo de Alianza Transparente:</div>
+              <p>Por cada alumno inscrito, Mater Admirabilis retiene una <strong>comisión neta directa del 20%</strong> (o S/ 70 por alumno) solo por facilitar el aula y los canales de cobro. TinkiLab asume el 100% del dictado, máquinas y filamentos.</p>
+            </div>
+
+          </div>
+
+          <!-- Resultados Financieros -->
+          <div class="md:col-span-5 p-6 rounded-2xl bg-gradient-to-b from-slate-950 to-blue-950/40 border border-cyan-500/30 text-center space-y-4">
+            
+            <div>
+              <span class="text-xs uppercase tracking-wider font-semibold text-slate-400">Recaudación Total del Taller</span>
+              <div id="recaudacion-total" class="font-display font-extrabold text-2xl text-slate-200 mt-1">
+                S/ 4,188
+              </div>
+            </div>
+
+            <div class="py-4 border-y border-slate-800">
+              <span class="text-xs uppercase tracking-wider font-bold text-emerald-400">Ingreso Neto para Mater Admirabilis</span>
+              <div id="ingreso-colegio" class="font-display font-extrabold text-4xl text-emerald-400 mt-1">
+                S/ 840
+              </div>
+              <span class="block text-[11px] text-slate-400 mt-1">Ganancia neta libre de costos</span>
+            </div>
+
+            <div class="text-left space-y-1.5 text-xs text-slate-300">
+              <div class="flex justify-between">
+                <span>Inversión del Colegio:</span>
+                <span class="font-bold text-emerald-400">S/ 0.00</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Riesgo en Maquinaria:</span>
+                <span class="font-bold text-emerald-400">0%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Sesiones del Taller:</span>
+                <span class="font-bold text-cyan-300">12 Sesiones (18h)</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/51964359899?text=Hola%20Henry,%20estuve%20viendo%20el%20simulador%20para%20Mater%20Admirabilis%20y%20quiero%20coordinar%20los%20horarios." target="_blank" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-display font-bold text-xs text-white shadow-lg shadow-emerald-600/30 transition flex items-center justify-center gap-2 no-print">
+              <span>Validar este Cupo por WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES DE DIRECCIÓN -->
+  <section class="py-16 border-b border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-2 mb-10">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Preguntas Frecuentes</span>
+        <h2 class="font-display text-2xl font-extrabold text-white">Respuestas Clave para el Equipo Directivo</h2>
+      </div>
+
+      <div class="space-y-4 text-sm">
+        
+        <details class="group p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <summary class="font-display font-bold text-slate-200 cursor-pointer flex justify-between items-center">
+            <span>¿Es seguro el uso de impresoras 3D para niños de primaria?</span>
+            <span class="text-cyan-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Totalmente seguro. Utilizamos exclusivamente filamento <strong>PLA (Ácido Poliláctico)</strong>, un bioplástico obtenido de almidón de maíz o caña de azúcar, 100% atóxico y sin emisión de gases nocivos. Además, la boquilla de extrusión cuenta con guardas de seguridad y es manipulada bajo supervisión estricta de los mentores de TinkiLab.
+          </p>
+        </details>
+
+        <details class="group p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <summary class="font-display font-bold text-slate-200 cursor-pointer flex justify-between items-center">
+            <span>¿El colegio necesita comprar computadoras nuevas o software especial?</span>
+            <span class="text-cyan-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+            No. Todo el modelado 3D se realiza en <strong>Tinkercad</strong> y en la plataforma de TinkiLab, las cuales se ejecutan 100% en la nube a través de Google Chrome. Cualquier computadora o laptop escolar con acceso a internet es suficiente.
+          </p>
+        </details>
+
+        <details class="group p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <summary class="font-display font-bold text-slate-200 cursor-pointer flex justify-between items-center">
+            <span>¿Cómo se coordina el horario de las 12 sesiones?</span>
+            <span class="text-cyan-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+            El horario más recomendado para el verano son <strong>2 sesiones semanales de 90 minutos</strong> (ejemplo: Martes y Jueves de 10:00 a.m. a 11:30 a.m., o en las tardes de 3:30 p.m. a 5:00 p.m.). Nos adaptamos a la disponibilidad de la sala de cómputo del colegio.
+          </p>
+        </details>
+
+        <details class="group p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <summary class="font-display font-bold text-slate-200 cursor-pointer flex justify-between items-center">
+            <span>¿Quién emite los certificados a los estudiantes?</span>
+            <span class="text-cyan-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Se entrega una <strong>certificación oficial compartida</strong> con los logos de TinkiLab y el Colegio Mater Admirabilis, acreditando las 18 horas lectivas en Diseño Digital, Fabricación 3D y Habilidades STEAM.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL Y CONTACTO -->
+  <section id="contacto" class="py-20 relative bg-gradient-to-t from-slate-950 via-slate-900 to-slate-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold">
+        <span>🤝</span> Alianza Estratégica Verano 2027
+      </div>
+
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+        Hagamos de este verano el inicio de un polo tecnológico en Chorrillos
+      </h2>
+
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        Estamos listos para sostener una reunión técnica con la dirección y la promotoría del <strong>Colegio Mater Admirabilis</strong> para revisar el aula, fijar el calendario y proveer el material publicitario para abrir inscripciones.
+      </p>
+
+      <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 max-w-lg mx-auto text-left space-y-3">
+        <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Contacto Directo TinkiLab:</div>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white">
+            HS
+          </div>
+          <div>
+            <span class="font-display font-bold text-white block">Henry Sanchez</span>
+            <span class="text-xs text-cyan-400">Director & Educador Maker • TinkiLab</span>
+          </div>
+        </div>
+        <div class="pt-2 border-t border-slate-800 flex flex-col gap-1 text-xs text-slate-300">
+          <span>📧 <strong>Email:</strong> contacto@tinkilab.com / henry.sanchez@fablablima.org</span>
+          <span>📱 <strong>WhatsApp Directo:</strong> +51 964 359 899</span>
+          <span>🌐 <strong>Web:</strong> <a href="https://tinkilab.com" class="text-cyan-400 underline">tinkilab.com</a></span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4 pt-4 no-print">
+        <a href="https://wa.me/51964359899?text=Hola%20Henry,%20acabo%20de%20revisar%20la%20propuesta%20de%20Mi%20Primera%20Colección%203D%20para%20el%20Colegio%20Mater%20Admirabilis.%20Coordinemos%20la%20reunión." target="_blank" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 font-display font-bold text-sm text-white shadow-xl shadow-cyan-500/30 transition flex items-center gap-2">
+          <span>Coordinar Reunión por WhatsApp</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+        <button onclick="window.print()" class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 font-display font-semibold text-sm text-slate-200 border border-slate-700 transition flex items-center gap-2">
+          <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+          <span>Imprimir / Guardar Dossier en PDF</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 py-8 bg-slate-950 text-slate-500 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-slate-400">TinkiLab</span>
+        <span>•</span>
+        <span>Democratizando la Fabricación Digital y la Educación STEAM</span>
+      </div>
+      <div>
+        Propuesta exclusiva para la I.E.P. Mater Admirabilis (Chorrillos) • © 2026-2027
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DE LA CALCULADORA INTERACTIVA -->
+  <script>
+    const slider = document.getElementById('alumnos-range');
+    const countDisplay = document.getElementById('alumnos-count');
+    const totalRecaudadoDisplay = document.getElementById('recaudacion-total');
+    const ingresoColegioDisplay = document.getElementById('ingreso-colegio');
+    const radiosPrecio = document.querySelectorAll('input[name="precio"]');
+
+    function actualizarCalculadora() {
+      const alumnos = parseInt(slider.value, 10);
+      let precioUnitario = 349;
+
+      radiosPrecio.forEach(r => {
+        if (r.checked) precioUnitario = parseInt(r.value, 10);
+      });
+
+      // Comisión para el colegio: ~20% del valor de matrícula (aprox S/ 70 por alumno)
+      const comisionPorAlumno = Math.round(precioUnitario * 0.20);
+      const totalRecaudado = alumnos * precioUnitario;
+      const ingresoColegio = alumnos * comisionPorAlumno;
+
+      countDisplay.textContent = alumnos;
+      totalRecaudadoDisplay.textContent = 'S/ ' + totalRecaudado.toLocaleString('es-PE');
+      ingresoColegioDisplay.textContent = 'S/ ' + ingresoColegio.toLocaleString('es-PE');
+    }
+
+    slider.addEventListener('input', actualizarCalculadora);
+    radiosPrecio.forEach(r => r.addEventListener('change', actualizarCalculadora));
+    
+    // Iniciar cálculo
+    actualizarCalculadora();
+  </script>
+
+</body>
+</html>

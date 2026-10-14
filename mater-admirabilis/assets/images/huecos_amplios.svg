@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <rect width="1000" height="1000" fill="#FFFFFF"/>
+  <line x1="500" y1="200" x2="500" y2="800" stroke="#F1F5F9" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- DEFINE MAKI BODY -->
+  <defs>
+    <path id="maki-body" d="
+      M -90, 140
+      L -30, 140
+      C -18, 140 -12, 124 0, 124
+      C 12, 124 18, 140 30, 140
+      L 90, 140
+      C 115, 140 120, 120 120, 80
+      L 120, 10
+      C 138, 10 148, 0 148, -15
+      C 148, -30 138, -40 120, -40
+      L 120, -75
+      C 120, -125 95, -145 40, -145
+      L -40, -145
+      C -95, -145 -120, -125 -120, -75
+      L -120, -40
+      C -138, -40 -148, -30 -148, -15
+      C -148, 0 -138, 10 -120, 10
+      L -120, 80
+      C -120, 120 -115, 140 -90, 140
+      Z
+    " fill="#000000"/>
+  </defs>
+
+  <!-- LEFT: TINY PINHOLES (BLOCKED IN 3D PRINTING) -->
+  <g transform="translate(250, 500)">
+    <use href="#maki-body"/>
+    <!-- Tiny dot eyes and thin slit mouth that the 0.4mm nozzle fills with solid plastic -->
+    <circle cx="-42" cy="-25" r="4" fill="#FFFFFF"/>
+    <circle cx="42" cy="-25" r="4" fill="#FFFFFF"/>
+    <line x1="-12" y1="20" x2="12" y2="20" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Red warning cross or faint indicator over tiny eyes -->
+    <circle cx="-42" cy="-25" r="16" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+    <circle cx="42" cy="-25" r="16" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+    <rect x="-24" y="10" width="48" height="20" rx="4" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+  </g>
+
+  <!-- RIGHT: GENEROUS OPEN NEGATIVE SPACES (PERFECT 3D PRINTING) -->
+  <g transform="translate(750, 500)">
+    <use href="#maki-body"/>
+    <!-- Generous square-rounded visor eyes & wide open mouth -->
+    <rect x="-60" y="-40" width="34" height="34" rx="10" fill="#FFFFFF"/>
+    <rect x="26" y="-40" width="34" height="34" rx="10" fill="#FFFFFF"/>
+    <path d="M -26, 16 C -20, 38 20, 38 26, 16 C 16, 22 -16, 22 -26, 16 Z" fill="#FFFFFF"/>
+    
+    <!-- Green check indicator highlighting the wide openings -->
+    <rect x="-66" y="-46" width="46" height="46" rx="14" stroke="#22C55E" stroke-width="2.5" fill="none"/>
+    <rect x="20" y="-46" width="46" height="46" rx="14" stroke="#22C55E" stroke-width="2.5" fill="none"/>
+    <rect x="-34" y="6" width="68" height="38" rx="12" stroke="#22C55E" stroke-width="2.5" fill="none"/>
+  </g>
+</svg>

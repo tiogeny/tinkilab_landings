@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <rect width="1000" height="1000" fill="#FFFFFF"/>
+  <line x1="500" y1="200" x2="500" y2="800" stroke="#F1F5F9" stroke-width="3" stroke-linecap="round"/>
+
+  <defs>
+    <!-- PUCHI BODY SILHOUETTE -->
+    <g id="puchi-mini">
+      <path d="
+        M -95, 140 L -35, 140 C -22, 140 -15, 122 0, 122 C 15, 122 22, 140 35, 140 L 95, 140
+        C 120, 140 126, 115 125, 75 C 125, 52 142, 38 152, 18 C 162, -2 152, -24 134, -22
+        C 122, -21 116, -10 112, 12 C 108, -50 92, -125 25, -135 C 30, -155 45, -170 30, -180
+        C 15, -190 -5, -165 0, -145 C -15, -165 -35, -190 -50, -180 C -65, -170 -50, -155 -45, -135
+        C -92, -125 -108, -50 -112, 12 C -116, -10 -122, -21 -134, -22 C -152, -24 -162, -2 -152, 18
+        C -142, 38 -125, 52 -125, 75 C -126, 115 -120, 140 -95, 140 Z
+      " fill="#000000"/>
+      <circle cx="-42" cy="-22" r="18" fill="#FFFFFF"/>
+      <circle cx="42" cy="-22" r="18" fill="#FFFFFF"/>
+      <path d="M -26, 12 C -24, 38 24, 38 26, 12 C 16, 18 -16, 18 -26, 12 Z" fill="#FFFFFF"/>
+    </g>
+  </defs>
+
+  <!-- LEFT: BAD LIGHTING (PAPER WITH DARK PHONE SHADOW OBSCURING DRAWING) -->
+  <g transform="translate(250, 500)">
+    <!-- Sheet of paper (tilted/greyish) -->
+    <rect x="-180" y="-180" width="360" height="360" rx="16" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="3"/>
+    
+    <!-- Puchi sketch on sheet -->
+    <g transform="scale(0.72)">
+      <use href="#puchi-mini"/>
+    </g>
+
+    <!-- Dark diagonal shadow of phone and hand cutting across drawing -->
+    <path d="M -180, -60 L 80, -180 L 180, -100 L -40, 180 L -180, 180 Z" fill="#0F172A" opacity="0.35"/>
+    
+    <!-- Smartphone held close casting shadow icon -->
+    <g transform="translate(10, -50) rotate(-25) scale(0.65)">
+      <rect x="-50" y="-90" width="100" height="180" rx="18" fill="#334155" stroke="#1E293B" stroke-width="4"/>
+      <circle cx="0" cy="-70" r="8" fill="#0F172A"/>
+    </g>
+  </g>
+
+  <!-- RIGHT: GOOD OVERHEAD CENITAL LIGHT (BRIGHT CRISP WHITE PAPER) -->
+  <g transform="translate(750, 500)">
+    <!-- Bright clean white paper sheet -->
+    <rect x="-180" y="-180" width="360" height="360" rx="16" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+    
+    <!-- Sun/Lamp light rays icon above -->
+    <g transform="translate(0, -215)">
+      <circle cx="0" cy="0" r="14" fill="#F59E0B"/>
+      <line x1="0" y1="-24" x2="0" y2="-18" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="0" y1="24" x2="0" y2="18" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="-24" y1="0" x2="-18" y2="0" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="24" y1="0" x2="18" y2="0" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="-16" y1="-16" x2="-12" y2="-12" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="16" y1="-16" x2="12" y2="-12" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Pristine Puchi on pure white paper with high contrast -->
+    <g transform="scale(0.72)">
+      <use href="#puchi-mini"/>
+    </g>
+
+    <!-- Camera symbol directly centered above flat -->
+    <g transform="translate(0, 130) scale(0.6)">
+      <rect x="-40" y="-28" width="80" height="56" rx="10" fill="#0F172A"/>
+      <circle cx="0" cy="0" r="14" fill="#FFFFFF"/>
+      <circle cx="0" cy="0" r="8" fill="#0F172A"/>
+      <rect x="-24" y="-36" width="20" height="8" rx="3" fill="#0F172A"/>
+    </g>
+  </g>
+</svg>
