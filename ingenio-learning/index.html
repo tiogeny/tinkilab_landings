@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tinkiLab × Ingenio Learning | Laboratorios STEAM & Fabricación Digital</title>
+  <meta name="description" content="Alianza estratégica B2B para potenciar la división Ingenio Kids con laboratorios de fabricación digital, modelado 3D y corte láser. Respaldado por graduados del Fab Academy (MIT Center for Bits and Atoms).">
+  
+  <!-- Favicon Oficial: Isólogo tinkiLab -->
+  <link rel="icon" type="image/png" href="assets/images/logo-tinkilab.png">
+  <link rel="apple-touch-icon" href="assets/images/logo-tinkilab.png">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tinkilab.com/ingenio-learning/">
+  <meta property="og:title" content="tinkiLab × Ingenio Learning | Alianza Estratégica Ingenio Kids">
+  <meta property="og:description" content="Laboratorios de Fabricación Digital, Impresión 3D y Corte Láser para la división Ingenio Kids. Metodología MIT Bits to Atoms sin inversión de capital para el instituto.">
+  <meta property="og:image" content="https://tinkilab.com/ingenio-learning/assets/images/proyecto1-digitoys.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tinki: {
+              red: '#FF3B30',
+              cyan: '#38BDF8',
+              cyanDark: '#0284C7',
+              dark: '#0F172A',
+              navy: '#1E293B',
+              slate: '#64748B'
+            },
+            ingenio: {
+              orange: '#FF5722',
+              orangeDark: '#E64A19',
+              orangeLight: '#FFF3E0',
+              blue: '#004B87',
+              navy: '#0B192C'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estructuración A4 Perfecta para Exportar en PDF o Imprimir */
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    @media print {
+      .no-print { display: none !important; }
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        font-size: 8.5pt;
+        line-height: 1.3;
+      }
+      .pdf-page-1, .pdf-page-2 {
+        page-break-after: always;
+        break-after: page;
+        padding-bottom: 4mm;
+      }
+      .pdf-page-3 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+      .print-break-inside {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      header { position: static !important; }
+      header .h-20 { height: 48px !important; }
+      .py-12, .py-10, .py-8 { padding-top: 12px !important; padding-bottom: 12px !important; }
+      .pt-12, .pb-16, .lg\:pt-16, .lg\:pb-20 { padding-top: 8px !important; padding-bottom: 10px !important; }
+      .mb-10, .mb-8, .mb-6 { margin-bottom: 8px !important; }
+      .shadow-xl, .shadow-lg, .shadow-md, .shadow-2xl, .shadow-sm, .shadow-xs { box-shadow: none !important; }
+      .border-slate-100, .border-slate-200 { border-color: #cbd5e1 !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50/60 text-slate-800 font-sans antialiased selection:bg-ingenio-orange selection:text-white">
+
+  <!-- Navbar Principal Co-branding -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-slate-200 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Logos Co-branding (Ingenio Learning & Kids + tinkiLab) -->
+      <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+        <!-- Logo Ingenio Kids -->
+        <a href="https://ingeniolearning.edu.pe/" target="_blank" class="flex items-center group">
+          <img src="assets/images/INGENIO KIDS.png" alt="Ingenio Kids" class="h-8 sm:h-9 w-auto object-contain transition group-hover:scale-105">
+        </a>
+
+        <!-- Línea Divisoria Vertical Fina -->
+        <div class="h-6 w-px bg-slate-300"></div>
+
+        <!-- Logo tinkiLab -->
+        <div class="flex items-center gap-2">
+          <img src="assets/images/logo-tinkilab.png" alt="tinkiLab" class="h-7 sm:h-8 w-auto object-contain">
+        </div>
+      </div>
+
+      <!-- Menú de Navegación -->
+      <nav class="hidden md:flex items-center gap-8 text-xs sm:text-sm font-semibold text-slate-600">
+        <a href="#propuesta-de-valor" class="hover:text-ingenio-orange transition">Propuesta de valor</a>
+        <a href="#metodologia" class="hover:text-tinki-cyanDark transition">Metodología</a>
+        <a href="#proyectos" class="hover:text-ingenio-orange transition">Proyectos</a>
+        <a href="#modalidades" class="hover:text-ingenio-orange transition">Modalidades B2B</a>
+      </nav>
+
+      <!-- Botones de Acción -->
+      <div class="flex items-center gap-2 flex-shrink-0 no-print">
+        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-semibold text-slate-700 border border-slate-200 transition">
+          <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+          PDF
+        </button>
+        <a href="https://wa.me/51934819501?text=Hola%20Henry,%20revisé%20la%20propuesta%20de%20tinkiLab%20para%20Ingenio%20Kids%20y%20me%20gustaría%20coordinar%20una%20reunión%20técnica." target="_blank" class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-ingenio-orange hover:bg-ingenio-orangeDark text-xs font-bold text-white shadow-sm shadow-orange-500/20 transition">
+          <span>Coordinar reunión</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HOJA 1 PDF: HERO + PROPUESTA DE VALOR B2B -->
+  <!-- ========================================== -->
+  <div class="pdf-page-1">
+    
+    <!-- HERO SECTION -->
+    <section class="relative pt-8 pb-12 sm:pt-12 sm:pb-16 bg-gradient-to-b from-white via-orange-50/20 to-white border-b border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        
+        <div class="text-center space-y-4 max-w-3xl mx-auto">
+          
+          <!-- Badge B2B -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-ingenio-orange text-[11px] font-bold tracking-wide uppercase">
+            <span class="w-2 h-2 rounded-full bg-ingenio-orange animate-pulse"></span>
+            Alianza Estratégica B2B • Ingenio Kids 2027
+          </div>
+
+          <!-- Título Principal -->
+          <h1 class="font-display font-extrabold text-2xl sm:text-4xl lg:text-[42px] text-slate-900 tracking-tight leading-tight">
+            De la programación en pantalla a la <span class="text-ingenio-orange">fabricación física</span> de tecnología
+          </h1>
+
+          <!-- Bajada / Subtítulo -->
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto">
+            <strong>Ingenio Learning</strong> lidera la formación en software, redes y cloud. <strong>tinkiLab</strong> aporta el brazo físico de prototipado rápido: laboratorios de <strong>impresión 3D multicolor</strong> y <strong>corte láser de alta precisión</strong>, operados por diplomados del <strong>Fab Academy del MIT</strong>.
+          </p>
+
+          <!-- 4 Pilares Rápidos en Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-3 text-left">
+            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs space-y-1">
+              <span class="text-base">🚀</span>
+              <div class="text-[11px] font-bold text-slate-900 leading-tight">Cero inversión CAPEX</div>
+              <div class="text-[10px] text-slate-500">Sin gasto en máquinas ni repuestos</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs space-y-1">
+              <span class="text-base">🎓</span>
+              <div class="text-[11px] font-bold text-slate-900 leading-tight">Fab Academy MIT</div>
+              <div class="text-[10px] text-slate-500">Docentes acreditados internacionalmente</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs space-y-1">
+              <span class="text-base">⚡</span>
+              <div class="text-[11px] font-bold text-slate-900 leading-tight">Operación 100% incluida</div>
+              <div class="text-[10px] text-slate-500">Materiales, máquinas e insumos</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs space-y-1">
+              <span class="text-base">📦</span>
+              <div class="text-[11px] font-bold text-slate-900 leading-tight">2 Proyectos de autor</div>
+              <div class="text-[10px] text-slate-500">Cada alumno se lleva su producto físico</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROPUESTA DE VALOR B2B PARA INGENIO LEARNING & GRUPO ON -->
+    <section id="propuesta-de-valor" class="py-10 bg-white border-b border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-6">
+        
+        <div class="text-center space-y-1 max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-wider text-ingenio-orange">Bits to Atoms</span>
+          <h2 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900">
+            Nuestra propuesta de valor para Ingenio Learning
+          </h2>
+          <p class="text-xs text-slate-600">
+            Añade una dimensión tangible y memorable al catálogo formativo de Ingenio Kids, sin fricción operativa.
+          </p>
+        </div>
+
+        <!-- 3 Tarjetas de Valor B2B -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          <!-- Tarjeta 1: Expansión de Portafolio -->
+          <div class="p-5 rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-orange-50/30 hover:border-orange-300 transition shadow-xs flex flex-col justify-between space-y-3">
+            <div class="space-y-2">
+              <div class="w-10 h-10 rounded-xl bg-orange-100 text-ingenio-orange flex items-center justify-center font-bold text-lg">
+                🧩
+              </div>
+              <h3 class="font-display font-bold text-sm text-slate-900 leading-snug">
+                Expansión de portafolio hacia el mundo físico
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                El mercado educativo infantil busca resultados tangibles. Complementamos sus cursos de robótica y programación con la <strong>fabricación aditiva y sustractiva</strong>, permitiendo que los niños toquen y lleven a casa su tecnología.
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 text-[11px] font-semibold text-ingenio-orange">
+              ✓ Mayor valor percibido por las familias
+            </div>
+          </div>
+
+          <!-- Tarjeta 2: Operación Llave en Mano -->
+          <div class="p-5 rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-blue-50/30 hover:border-blue-300 transition shadow-xs flex flex-col justify-between space-y-3">
+            <div class="space-y-2">
+              <div class="w-10 h-10 rounded-xl bg-blue-100 text-tinki-cyanDark flex items-center justify-center font-bold text-lg">
+                ⚙️
+              </div>
+              <h3 class="font-display font-bold text-sm text-slate-900 leading-snug">
+                Laboratorio Maker 100% llave en mano
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Ingenio Learning dispone sus salas de cómputo y canales de difusión. <strong>tinkiLab traslada e instala impresoras 3D, cortadoras láser de precisión, insumos PLA ecológicos, maderas MDF y pinturas</strong>, con supervisión técnica continua.
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 text-[11px] font-semibold text-tinki-cyanDark">
+              ✓ Cero riesgo técnico ni mantenimiento
+            </div>
+          </div>
+
+          <!-- Tarjeta 3: Solución Corporativa Grupo ON -->
+          <div class="p-5 rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 hover:border-slate-300 transition shadow-xs flex flex-col justify-between space-y-3">
+            <div class="space-y-2">
+              <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-lg">
+                🏢
+              </div>
+              <h3 class="font-display font-bold text-sm text-slate-900 leading-snug">
+                Potencial corporativo para clientes de ON
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Como parte de <strong>ON Empresas</strong>, Ingenio cuenta con acceso a grandes cuentas corporativas. Este formato es ideal para comercializar <em>Family Days corporativos</em>, talleres para hijos de ejecutivos y fidelización de clientes B2B.
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 text-[11px] font-semibold text-slate-800">
+              ✓ Flexibilidad para definir márgenes comerciales
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ========================================== -->
+  <!-- HOJA 2 PDF: METODOLOGÍA + 2 PROYECTOS -->
+  <!-- ========================================== -->
+  <div class="pdf-page-2">
+
+    <!-- METODOLOGÍA STEPPER: APRENDER HACIENDO -->
+    <section id="metodologia" class="py-10 bg-slate-50/70 border-b border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-6">
+        
+        <div class="text-center space-y-1 max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-wider text-ingenio-orange">Pedagogía Maker Activa</span>
+          <h2 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900">
+            Nuestra metodología: el camino de la idea al producto
+          </h2>
+          <p class="text-xs text-slate-600">
+            Aprender haciendo: cada estudiante atraviesa el ciclo completo de diseño y fabricación digital.
+          </p>
+        </div>
+
+        <!-- Stepper en 6 Pasos -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          
+          <!-- 01 Imagina -->
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-full bg-red-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">01</span>
+                <h3 class="font-display font-bold text-xs sm:text-sm text-slate-900">Imagina</h3>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-2 leading-relaxed">
+                Boceto libre en papel y lluvia de ideas creativas.
+              </p>
+            </div>
+            <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-slate-500">
+              Concepto visual
+            </div>
+          </div>
+
+          <!-- 02 Diseña -->
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-full bg-orange-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">02</span>
+                <h3 class="font-display font-bold text-xs sm:text-sm text-slate-900">Diseña</h3>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-2 leading-relaxed">
+                Modelado 3D y vectores en plataforma makerdu.
+              </p>
+            </div>
+            <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-slate-500">
+              Diseño digital
+            </div>
+          </div>
+
+          <!-- 03 Fabrica -->
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-full bg-amber-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">03</span>
+                <h3 class="font-display font-bold text-xs sm:text-sm text-slate-900">Fabrica</h3>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-2 leading-relaxed">
+                Impresión 3D multicolor y corte láser de precisión.
+              </p>
+            </div>
+            <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-slate-500">
+              De bits a átomos
+            </div>
+          </div>
+
+          <!-- 04 Personaliza -->
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-full bg-emerald-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">04</span>
+                <h3 class="font-display font-bold text-xs sm:text-sm text-slate-900">Personaliza</h3>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-2 leading-relaxed">
+                Pinturas acrílicas, rotuladores y ensamble manual.
+              </p>
+            </div>
+            <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-slate-500">
+              Acabado de autor
+            </div>
+          </div>
+
+          <!-- 05 Valida -->
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-full bg-blue-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">05</span>
+                <h3 class="font-display font-bold text-xs sm:text-sm text-slate-900">Valida</h3>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-2 leading-relaxed">
+                Test de ensamble, encaje de ranuras y estabilidad.
+              </p>
+            </div>
+            <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-slate-500">
+              Control de calidad
+            </div>
+          </div>
+
+          <!-- 06 Presenta -->
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-full bg-purple-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">06</span>
+                <h3 class="font-display font-bold text-xs sm:text-sm text-slate-900">Presenta</h3>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-2 leading-relaxed">
+                Demo Day con familias y entrega de diplomas.
+              </p>
+            </div>
+            <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-purple-700 whitespace-nowrap">
+              🏆 Proyecto + Diploma
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROYECTOS DE AUTOR: 2 GRANDES ENTREGABLES -->
+    <section id="proyectos" class="py-10 bg-white border-b border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-6">
+        
+        <div class="text-center space-y-1 max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-wider text-ingenio-orange">Portafolio Formativo</span>
+          <h2 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900">
+            2 Proyectos de autor con alto impacto tecnológico
+          </h2>
+          <p class="text-xs text-slate-600">
+            Piezas físicas de alta calidad creadas desde cero por cada estudiante durante el programa.
+          </p>
+        </div>
+
+        <!-- Grid de los 2 Proyectos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Proyecto 1: Digitoys 2.5D -->
+          <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xs hover:shadow-md transition print-break-inside flex flex-col justify-between">
+            <div>
+              <div class="h-56 sm:h-64 bg-slate-100 overflow-hidden border-b border-slate-100">
+                <img src="assets/images/proyecto1-digitoys.jpg" alt="Personaje 2.5D Digitoys impreso en 3D en estudio maker" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6 space-y-2.5">
+                <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-orange-50 text-ingenio-orange inline-block">
+                  Módulo 1 • Foco Impresión 3D y Modelado Digital
+                </span>
+                <h3 class="font-display font-extrabold text-lg text-slate-900 leading-snug">
+                  Proyecto 1: Personaje coleccionable Digitoys 2.5D
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Del boceto conceptual al modelado 3D en makerdu. Cada estudiante diseña su propio personaje, lo imprime en filamento biodegradable PLA y le da acabado artístico con pinturas al agua y rotuladores, montándolo sobre su peana de autor.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-slate-100 text-xs font-semibold text-emerald-600 flex items-center gap-1.5 sm:whitespace-nowrap">
+              <span>✓</span> <span>Entregable: Escultura Digitoys de autor terminada y rotulada.</span>
+            </div>
+          </div>
+
+          <!-- Proyecto 2: Diorama Multicapa en Madera -->
+          <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xs hover:shadow-md transition print-break-inside flex flex-col justify-between">
+            <div>
+              <div class="h-56 sm:h-64 bg-slate-100 overflow-hidden border-b border-slate-100">
+                <img src="assets/images/proyecto2-diorama.jpg" alt="Cuadro diorama multicapa en madera corte láser con ensamble de ranuras" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6 space-y-2.5">
+                <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-blue-50 text-tinki-cyanDark inline-block">
+                  Módulo 2 • Foco Corte Láser y Ensamble 3D
+                </span>
+                <h3 class="font-display font-extrabold text-lg text-slate-900 leading-snug">
+                  Proyecto 2: Diorama multicapa en madera MDF
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Diseño vectorial y ensamble tridimensional. Los alumnos diseñan siluetas con planos de profundidad que luego son cortadas con precisión milimétrica en cortadora láser. Ensamblan la caja mediante encajes de madera y la presentan en el Demo Day.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-slate-100 text-xs font-semibold text-tinki-cyanDark flex items-center gap-1.5 sm:whitespace-nowrap">
+              <span>✓</span> <span>Entregable: Cuadro diorama 3D ensamblado y listo para exhibición.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ========================================== -->
+  <!-- HOJA 3 PDF: MODALIDADES B2B + RESPALDO + CONTACTO -->
+  <!-- ========================================== -->
+  <div class="pdf-page-3">
+
+    <!-- MODALIDADES DE ALIANZA INSTITUCIONAL B2B -->
+    <section id="modalidades" class="py-10 bg-slate-50/70 border-b border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-6">
+        
+        <div class="text-center space-y-1 max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-wider text-ingenio-orange">Esquemas de Colaboración</span>
+          <h2 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900">
+            Modalidades flexibles según la estrategia de Ingenio
+          </h2>
+          <p class="text-xs text-slate-600">
+            Diseñadas para adaptarse tanto a la venta retail para familias como a paquetes corporativos B2B.
+          </p>
+        </div>
+
+        <!-- 3 Modalidades B2B -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-3 print-break-inside">
+            <div class="text-2xl">🏫</div>
+            <h3 class="font-display font-bold text-sm text-slate-900">1. Vacacional In-House</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Dictado en las sedes y laboratorios de cómputo de Ingenio Learning durante enero y febrero. tinkiLab traslada e instala el equipamiento maker para las sesiones de fabricación.
+            </p>
+            <div class="pt-2 border-t border-slate-100 text-[10px] text-slate-500 font-semibold">
+              Frecuencia: 2 o 3 sesiones por semana • Grupos reducidos
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-3 print-break-inside">
+            <div class="text-2xl">💼</div>
+            <h3 class="font-display font-bold text-sm text-slate-900">2. In-Company para Clientes ON</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Paquetes de talleres maker ofrecidos a las empresas clientes de Grupo ON como beneficio para colaboradores e hijos. Adaptables en sede corporativa o en Ingenio Learning.
+            </p>
+            <div class="pt-2 border-t border-slate-100 text-[10px] text-slate-500 font-semibold">
+              Formato cerrado corporativo • Fechas a medida
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-3 print-break-inside">
+            <div class="text-2xl">⚡</div>
+            <h3 class="font-display font-bold text-sm text-slate-900">3. Bootcamps Intensivos Maker</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Talleres condensados de 1 o 2 fines de semana orientados a la producción rápida de un proyecto completo, ideales para convocatorias rápidas o eventos especiales de temporada.
+            </p>
+            <div class="pt-2 border-t border-slate-100 text-[10px] text-slate-500 font-semibold">
+              Modalidad intensiva • Alta conversión
+            </div>
+          </div>
+
+        </div>
+
+        <!-- División de Responsabilidades Operativas -->
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-slate-500 mb-3 text-center">
+            División de roles para una ejecución impecable
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="p-4 rounded-xl bg-orange-50/40 border border-orange-100 space-y-2">
+              <div class="flex items-center gap-2 font-display font-bold text-xs text-slate-900">
+                <img src="assets/images/logo-ingenio.png" alt="Ingenio" class="h-4 w-auto object-contain">
+                <span>Ingenio Learning aporta:</span>
+              </div>
+              <ul class="space-y-1 text-xs text-slate-600">
+                <li class="flex items-start gap-1.5"><span class="text-ingenio-orange font-bold">✓</span> Convocatoria, matrícula y cobranza a clientes o familias.</li>
+                <li class="flex items-start gap-1.5"><span class="text-ingenio-orange font-bold">✓</span> Aulas de cómputo con conexión a internet para modelado 3D.</li>
+                <li class="flex items-start gap-1.5"><span class="text-ingenio-orange font-bold">✓</span> Difusión comercial bajo la marca Ingenio Kids.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex items-center gap-2 font-display font-bold text-xs text-slate-900">
+                <img src="assets/images/logo-tinkilab.png" alt="tinkiLab" class="h-4 w-auto object-contain">
+                <span>tinkiLab aporta:</span>
+              </div>
+              <ul class="space-y-1 text-xs text-slate-600">
+                <li class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> Tutores especializados diplomados del Fab Academy MIT CBA.</li>
+                <li class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> Impresoras 3D y cortadora láser instaladas y calibradas.</li>
+                <li class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> Todos los materiales e insumos (PLA, madera MDF, pinturas).</li>
+                <li class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> Plataforma makerdu 24/7 y acreditación técnica.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESPALDO MIT MEDIA LAB & CONTACTO -->
+    <section id="contacto" class="py-10 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
+        
+        <!-- Bloque MIT & YouTube -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 shadow-xs space-y-5 print-break-inside text-center max-w-3xl mx-auto">
+          <div class="space-y-2 max-w-2xl mx-auto">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-orange-50 text-ingenio-orange border border-orange-200">
+              <span>🏛️</span> Respaldo internacional & divulgación maker
+            </div>
+            <h3 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900 leading-snug">
+              Dirección pedagógica formada en el MIT Media Lab
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              La dirección técnica de tinkiLab cuenta con la acreditación global del <strong>Fab Academy (Center for Bits and Atoms del MIT)</strong>. Promovemos activamente la educación maker en Perú a través de nuestro canal de YouTube con decenas de tutoriales y reflexiones tecnológicas.
+            </p>
+          </div>
+
+          <!-- Video Incrustado 16:9 -->
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md aspect-video bg-slate-900 max-w-2xl mx-auto no-print">
+            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/hmhbrD1W8i0" title="tinkiLab en el MIT Media Lab" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <!-- Versión para impresión PDF -->
+          <div class="hidden print:block p-3 rounded-xl border border-slate-200 bg-white text-[10px] text-slate-700 space-y-1 text-left max-w-xl mx-auto">
+            <span class="font-bold text-slate-900 block">📺 Canal oficial y divulgación STEAM:</span>
+            <div>youtube.com/@tinkiLab • Episodio especial: <em>Estuvimos en el MIT Media Lab: 25 Años del movimiento Fab Lab</em></div>
+          </div>
+
+          <div class="pt-1 no-print">
+            <a href="https://www.youtube.com/playlist?list=PLAeW1pyLvEMi5vMVVY2pvl_xjjlexAD-9" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-bold text-xs transition border border-slate-200 shadow-xs">
+              <svg class="w-4 h-4 fill-red-600" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <span>Ver canal oficial y podcast de tinkiLab</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sección de Llamado a la Acción y Ficha de Contacto -->
+        <div class="text-center space-y-4">
+          <h2 class="font-display text-xl sm:text-2xl font-extrabold text-slate-900">
+            ¿Coordinamos una reunión técnica para afinar la propuesta?
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm max-w-lg mx-auto">
+            Podemos reunirnos de forma virtual o en las instalaciones de Ingenio Learning para dimensionar horarios, requerimientos de laboratorio y cronograma de lanzamiento.
+          </p>
+
+          <!-- Ficha de Contacto -->
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs max-w-sm mx-auto text-left space-y-2">
+            <div class="flex items-center gap-2.5 pb-2 border-b border-slate-100">
+              <div class="w-8 h-8 rounded-lg bg-ingenio-orange text-white flex items-center justify-center font-display font-bold text-xs">
+                HS
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-slate-900 text-xs sm:text-sm">Henry Sanchez</h4>
+                <span class="text-[10px] text-ingenio-orange font-semibold">Director & Educador Maker • tinkiLab</span>
+              </div>
+            </div>
+
+            <div class="space-y-1 text-xs text-slate-700">
+              <div><span class="text-slate-400">🎓 Credencial:</span> <span class="font-medium text-slate-900">Diplomado Fab Academy (MIT CBA)</span></div>
+              <div><span class="text-slate-400">📧 Email:</span> <a href="mailto:hola@tinkilab.com" class="font-semibold text-slate-900 hover:text-ingenio-orange">hola@tinkilab.com</a></div>
+              <div><span class="text-slate-400">📱 WhatsApp:</span> <a href="https://wa.me/51934819501" target="_blank" class="font-semibold text-emerald-600 hover:underline">+51 934 819 501</a></div>
+            </div>
+          </div>
+
+          <!-- Botones de Acción -->
+          <div class="flex flex-wrap justify-center gap-2.5 pt-1 no-print">
+            <a href="https://wa.me/51934819501?text=Hola%20Henry,%20revisé%20la%20propuesta%20de%20tinkiLab%20para%20Ingenio%20Kids%20y%20me%20gustaría%20coordinar%20una%20reunión%20técnica." target="_blank" class="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-display font-bold text-xs text-white shadow-xs transition flex items-center gap-2">
+              <span>Coordinar por WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 font-display font-semibold text-xs text-slate-700 border border-slate-300 transition flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+              <span>Guardar propuesta en PDF</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 py-4 bg-white text-slate-500 text-[10px]">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-slate-800">tinkiLab × Ingenio Learning</span>
+          <span>•</span>
+          <span>ON Empresas</span>
+          <span>•</span>
+          <span>Democratizando la fabricación digital y la educación STEAM</span>
+        </div>
+        <div>
+          Propuesta Estratégica B2B • Verano 2027
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
