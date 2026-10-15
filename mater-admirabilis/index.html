@@ -461,7 +461,7 @@
                 </p>
               </div>
               <div class="mt-3 pt-2 border-t border-amber-200">
-                <span class="inline-block px-2 py-0.5 rounded bg-amber-50 text-[10px] font-bold text-amber-800">🏆 Proyecto final + Diploma</span>
+                <span class="inline-block px-1.5 py-0.5 rounded bg-amber-50 text-[9.5px] font-bold text-amber-800 whitespace-nowrap">🏆 Proyecto + Diploma</span>
               </div>
             </div>
 
@@ -506,7 +506,7 @@
                 </p>
               </div>
             </div>
-            <div class="p-6 pt-0 border-t border-slate-100 text-xs font-semibold text-emerald-600 flex items-center gap-1.5">
+            <div class="p-6 pt-0 border-t border-slate-100 text-xs font-semibold text-emerald-600 flex items-center gap-1.5 whitespace-nowrap">
               <span>✓</span> <span>Se llevan a casa en Semana 3: Escultura Digitoys de autor terminada.</span>
             </div>
           </div>
@@ -529,12 +529,10 @@
                 </p>
               </div>
             </div>
-            <div class="p-6 pt-0 border-t border-slate-100 text-xs font-semibold text-amber-700 flex items-center gap-1.5">
-              <span>✓</span> <span>Se llevan a casa en Semana 6: Cuadro diorama 3D ensamblado + Certificado.</span>
+            <div class="p-6 pt-0 border-t border-slate-100 text-xs font-semibold text-amber-700 flex items-center gap-1.5 whitespace-nowrap">
+              <span>✓</span> <span>Se llevan en Semana 6: Cuadro diorama 3D ensamblado.</span>
             </div>
           </div>
-
-        </div>
 
         </div>
 
@@ -645,21 +643,30 @@
 
           </div>
 
-          <!-- Selector de Formato de Grupo / Turnos (Adaptado a Primaria) -->
+          <!-- Selector de Formato de Grupo y Proyección Rápida -->
           <div class="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
-            <span class="text-xs font-bold text-slate-300 block">Formato y aforo del aula de cómputo:</span>
+            <span class="text-xs font-bold text-slate-300 block">Aforo y proyección rápida para Mater Admirabilis:</span>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-              <button type="button" onclick="seleccionarFormato('estandar')" id="btn-fmt-estandar" class="p-2.5 rounded-xl border text-left transition border-tinki-cyan bg-tinki-cyan/10">
-                <span class="block text-xs font-bold text-white">1 Grupo estándar</span>
-                <span class="block text-[10px] text-slate-400">Hasta 12 alumnos (1 Tutor titular)</span>
+              <button type="button" onclick="seleccionarFormato('estandar')" id="btn-fmt-estandar" class="p-3 rounded-xl border text-left transition border-tinki-cyan bg-tinki-cyan/10">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="block text-xs font-bold text-white">1 Grupo base</span>
+                  <span class="text-[10px] font-extrabold text-emerald-400 bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/30">S/ 2,100 neta</span>
+                </div>
+                <span class="block text-[10px] text-slate-400">12 alumnos • 1 Tutor titular</span>
               </button>
-              <button type="button" onclick="seleccionarFormato('grande')" id="btn-fmt-grande" class="p-2.5 rounded-xl border text-left transition border-slate-800 bg-slate-950 hover:border-slate-700">
-                <span class="block text-xs font-bold text-white">1 Grupo reforzado</span>
-                <span class="block text-[10px] text-slate-400">13 a 20 alumnos (Titular + Asistente)</span>
+              <button type="button" onclick="seleccionarFormato('grande')" id="btn-fmt-grande" class="p-3 rounded-xl border text-left transition border-slate-800 bg-slate-950 hover:border-slate-700">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="block text-xs font-bold text-white">1 Salón lleno</span>
+                  <span class="text-[10px] font-extrabold text-emerald-400 bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/30">S/ 3,150 neta</span>
+                </div>
+                <span class="block text-[10px] text-slate-400">18 alumnos • Titular + Asistente</span>
               </button>
-              <button type="button" onclick="seleccionarFormato('doble')" id="btn-fmt-doble" class="p-2.5 rounded-xl border text-left transition border-slate-800 bg-slate-950 hover:border-slate-700">
-                <span class="block text-xs font-bold text-white">2 Turnos paralelos</span>
-                <span class="block text-[10px] text-slate-400">Mañana + Tarde (hasta 24 alumnos)</span>
+              <button type="button" onclick="seleccionarFormato('doble')" id="btn-fmt-doble" class="p-3 rounded-xl border text-left transition border-slate-800 bg-slate-950 hover:border-slate-700">
+                <div class="flex items-center justify-between mb-0.5">
+                  <span class="block text-xs font-bold text-white">2 Turnos paralelos</span>
+                  <span class="text-[10px] font-extrabold text-emerald-400 bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/30">S/ 4,200 neta</span>
+                </div>
+                <span class="block text-[10px] text-slate-400">24 alumnos • Mañana + Tarde</span>
               </button>
             </div>
           </div>
@@ -753,36 +760,36 @@
     <section id="contacto" class="py-8 bg-slate-50">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
         
-        <!-- Bloque de Respaldo MIT Media Lab & YouTube -->
-        <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-xs grid grid-cols-1 md:grid-cols-12 gap-6 items-center print-break-inside">
-          <div class="md:col-span-7 space-y-2.5">
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-red-50 text-tinki-red border border-red-100">
+        <!-- Bloque de Respaldo MIT Media Lab & YouTube (Grande y Protagónico) -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-5 print-break-inside text-center max-w-3xl mx-auto">
+          <div class="space-y-2 max-w-2xl mx-auto">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-50 text-tinki-red border border-red-100">
               <span>🏛️</span> Respaldo internacional & divulgación STEAM
             </div>
-            <h3 class="font-display font-extrabold text-base sm:text-lg text-slate-900 leading-snug">
+            <h3 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900 leading-snug">
               Dirección formada en el MIT Media Lab y creadores del podcast oficial tinkiLab
             </h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               La propuesta pedagógica de tinkiLab está dirigida por profesionales diplomados del <strong>Fab Academy (Center for Bits and Atoms del MIT)</strong>. Además, compartimos guías abiertas, tutoriales y casos de éxito en nuestro canal de YouTube con más de 18 episodios dedicados a la educación maker.
             </p>
-            <div class="pt-1 no-print">
-              <a href="https://www.youtube.com/playlist?list=PLAeW1pyLvEMi5vMVVY2pvl_xjjlexAD-9" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-red-50 hover:bg-red-100 text-tinki-red font-semibold text-xs transition border border-red-200">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                <span>Ver lista completa en YouTube (+18 episodios)</span>
-              </a>
-            </div>
           </div>
 
-          <!-- Video Incrustado Responsive -->
-          <div class="md:col-span-5">
-            <div class="rounded-xl overflow-hidden border border-slate-200 shadow-xs aspect-video bg-slate-900 no-print">
-              <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/hmhbrD1W8i0" title="tinkiLab en el MIT Media Lab" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <!-- Alternativa compacta para impresión PDF (no gasta tinta ni rompe layout) -->
-            <div class="hidden print:block p-3 rounded-xl border border-slate-200 bg-slate-50 text-[10px] text-slate-700 space-y-1">
-              <span class="font-bold text-slate-900 block">📺 Canal oficial y divulgación STEAM:</span>
-              <div>youtube.com/@tinkiLab • Episodio especial: <em>Estuvimos en el MIT Media Lab: 25 Años del movimiento Fab Lab</em></div>
-            </div>
+          <!-- Video Incrustado Grande y Protagónico (16:9 Amplio) -->
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md aspect-video bg-slate-900 max-w-2xl mx-auto no-print">
+            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/hmhbrD1W8i0" title="tinkiLab en el MIT Media Lab" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <!-- Alternativa compacta para impresión PDF (no gasta tinta ni rompe layout) -->
+          <div class="hidden print:block p-3 rounded-xl border border-slate-200 bg-slate-50 text-[10px] text-slate-700 space-y-1 text-left max-w-xl mx-auto">
+            <span class="font-bold text-slate-900 block">📺 Canal oficial y divulgación STEAM:</span>
+            <div>youtube.com/@tinkiLab • Episodio especial: <em>Estuvimos en el MIT Media Lab: 25 Años del movimiento Fab Lab</em></div>
+          </div>
+
+          <div class="pt-1 no-print">
+            <a href="https://www.youtube.com/playlist?list=PLAeW1pyLvEMi5vMVVY2pvl_xjjlexAD-9" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-red-50 hover:bg-red-100 text-tinki-red font-bold text-xs transition border border-red-200">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <span>Ver lista completa en YouTube (+18 episodios de podcast y tutoriales)</span>
+            </a>
           </div>
         </div>
 
@@ -867,23 +874,23 @@
       const btnDoble = document.getElementById('btn-fmt-doble');
 
       [btnEstandar, btnGrande, btnDoble].forEach(b => {
-        b.className = 'p-2.5 rounded-xl border text-left transition border-slate-800 bg-slate-950 hover:border-slate-700';
+        b.className = 'p-3 rounded-xl border text-left transition border-slate-800 bg-slate-950 hover:border-slate-700';
       });
 
       if (fmt === 'estandar') {
-        btnEstandar.className = 'p-2.5 rounded-xl border text-left transition border-tinki-cyan bg-tinki-cyan/10';
+        btnEstandar.className = 'p-3 rounded-xl border text-left transition border-tinki-cyan bg-tinki-cyan/10';
         sliderAlumnos.min = 6;
         sliderAlumnos.max = 12;
         sliderAlumnos.value = 12;
         sliderLabels.innerHTML = '<span>6 alumnos</span><span>8</span><span>10</span><span>12 alumnos</span>';
       } else if (fmt === 'grande') {
-        btnGrande.className = 'p-2.5 rounded-xl border text-left transition border-tinki-cyan bg-tinki-cyan/10';
+        btnGrande.className = 'p-3 rounded-xl border text-left transition border-tinki-cyan bg-tinki-cyan/10';
         sliderAlumnos.min = 13;
         sliderAlumnos.max = 20;
         sliderAlumnos.value = 18;
         sliderLabels.innerHTML = '<span>13 alumnos</span><span>15</span><span>18</span><span>20 alumnos</span>';
       } else if (fmt === 'doble') {
-        btnDoble.className = 'p-2.5 rounded-xl border text-left transition border-tinki-cyan bg-tinki-cyan/10';
+        btnDoble.className = 'p-3 rounded-xl border text-left transition border-tinki-cyan bg-tinki-cyan/10';
         sliderAlumnos.min = 18;
         sliderAlumnos.max = 26;
         sliderAlumnos.value = 24;
