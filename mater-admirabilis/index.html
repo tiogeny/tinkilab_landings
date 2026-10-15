@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tinkiLab × Colegio Mater Admirabilis | Talleres STEAM Verano 2027</title>
-  <meta name="description" content="Propuesta de Alianza B2B: Laboratorio Maker de Fabricación Digital, Impresión 3D Multicolor y Corte Láser para estudiantes de primaria y familias del Colegio Mater Admirabilis de Chorrillos.">
+  <meta name="description" content="Propuesta de Alianza B2B: Laboratorio Maker de Fabricación Digital, Impresión 3D y Corte Láser para estudiantes de primaria y familias del Colegio Mater Admirabilis de Chorrillos.">
   
   <!-- Favicon Oficial: Isólogo tinkiLab (Círculo Rojo con Bombilla Maker 2.png) -->
   <link rel="icon" type="image/png" href="assets/images/favicon-tinkilab.png">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tinkilab.com/mater-admirabilis/">
   <meta property="og:title" content="tinkiLab × Colegio Mater Admirabilis | Talleres STEAM Verano 2027">
-  <meta property="og:description" content="Propuesta de Talleres de Fabricación Digital, Impresión 3D Multicolor y Emprendimiento Maker en Chorrillos. Sin inversión en maquinaria para el colegio.">
+  <meta property="og:description" content="Propuesta de Talleres de Fabricación Digital, Impresión 3D y Emprendimiento Maker en Chorrillos. Sin inversión en maquinaria para el colegio.">
   <meta property="og:image" content="https://tinkilab.com/mater-admirabilis/assets/images/og-share-mater.jpg">
   <meta property="og:image:secure_url" content="https://tinkilab.com/mater-admirabilis/assets/images/og-share-mater.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -22,7 +22,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="tinkiLab × Colegio Mater Admirabilis | Talleres STEAM Verano 2027">
-  <meta name="twitter:description" content="Laboratorio Maker de Fabricación Digital, Impresión 3D Multicolor y Corte Láser para estudiantes de Chorrillos.">
+  <meta name="twitter:description" content="Laboratorio Maker de Fabricación Digital, Impresión 3D y Corte Láser para estudiantes de Chorrillos.">
   <meta name="twitter:image" content="https://tinkilab.com/mater-admirabilis/assets/images/og-share-mater.jpg">
 
   <!-- Google Fonts -->
@@ -63,7 +63,7 @@
     /* Estructuración A4 Perfecta para Guardar en PDF e Imprimir */
     @page {
       size: A4 portrait;
-      margin: 12mm 14mm 12mm 14mm;
+      margin: 10mm 12mm 10mm 12mm;
     }
 
     @media print {
@@ -71,13 +71,13 @@
       body {
         background: #ffffff !important;
         color: #0f172a !important;
-        font-size: 9.5pt;
-        line-height: 1.35;
+        font-size: 8.5pt;
+        line-height: 1.3;
       }
-      .pdf-page-1, .pdf-page-2, .pdf-page-3 {
+      .pdf-page-1, .pdf-page-2 {
         page-break-after: always;
         break-after: page;
-        padding-bottom: 8mm;
+        padding-bottom: 4mm;
       }
       .pdf-page-3 {
         page-break-after: avoid;
@@ -88,8 +88,27 @@
         page-break-inside: avoid;
       }
       header { position: static !important; }
+      header .h-20 { height: 48px !important; }
+      .py-12, .py-10, .py-8 { padding-top: 14px !important; padding-bottom: 14px !important; }
+      .pt-12, .pb-16, .lg\:pt-16, .lg\:pb-20 { padding-top: 10px !important; padding-bottom: 12px !important; }
+      .mb-10, .mb-8, .mb-6 { margin-bottom: 10px !important; }
       .shadow-xl, .shadow-lg, .shadow-md, .shadow-2xl, .shadow-sm, .shadow-xs { box-shadow: none !important; }
       .border-slate-100, .border-slate-200 { border-color: #cbd5e1 !important; }
+
+      /* Convertir simulador a versión ejecutiva clara en impresión/PDF */
+      #simulador {
+        background: #f8fafc !important;
+        color: #0f172a !important;
+        border-color: #cbd5e1 !important;
+      }
+      #simulador h3, #simulador h4, #simulador .text-white { color: #0f172a !important; }
+      #simulador .bg-slate-950, #simulador .bg-slate-900 {
+        background: #ffffff !important;
+        border-color: #cbd5e1 !important;
+      }
+      #simulador .text-slate-400, #simulador .text-slate-500 { color: #64748b !important; }
+      #simulador .text-slate-300 { color: #334155 !important; }
+      #simulador input[type="range"] { display: none !important; }
     }
   </style>
 </head>
@@ -142,21 +161,21 @@
   </header>
 
   <!-- ========================================== -->
-  <!-- HOJA 1 PDF: HERO + APORTE TINKILAB (MÁQUINAS REALES) -->
+  <!-- HOJA 1 PDF: HERO + PROPUESTA DE VALOR COMPACTA -->
   <!-- ========================================== -->
   <div class="pdf-page-1">
     
-    <!-- HERO SECTION -->
-    <section class="pt-8 pb-14 bg-gradient-to-b from-slate-50 to-white border-b border-slate-200">
+    <!-- HERO SECTION (Espacioso y con foco en Aprender Haciendo) -->
+    <section class="pt-12 pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-slate-50 to-white border-b border-slate-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           <!-- Columna Izquierda: Mensaje Central con Título Exacto -->
-          <div class="lg:col-span-7 space-y-4">
+          <div class="lg:col-span-7 space-y-5">
             
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
               <span class="w-2 h-2 rounded-full bg-tinki-cyan"></span>
-              Alianza educativa de verano 2027 • Chorrillos
+              Alianza educativa de verano 2027 • Aprender haciendo en Primaria
             </div>
 
             <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -164,13 +183,13 @@
             </h1>
 
             <p class="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
-              Llevamos la experiencia de un laboratorio de tecnología a tu colegio sin compra de equipos. <strong>tinkiLab</strong> aporta las impresoras 3D multicolor, cortadora láser, materiales y tutores especializados para crear una propuesta de verano autofinanciada, rentable y de alto valor para tus familias.
+              Llevamos la experiencia de un laboratorio de tecnología a tu colegio sin compra de equipos. <strong>tinkiLab</strong> aporta las impresoras 3D, cortadora láser, materiales y tutores especializados para crear una propuesta de verano autofinanciada, rentable y de alto valor para tus familias.
             </p>
 
-            <!-- One-Liner Especificaciones y Tecnologías (Sin cajitas saturadas) -->
-            <div class="pt-1 space-y-2">
+            <!-- One-Liner Especificaciones y Tecnologías -->
+            <div class="pt-1 space-y-1.5">
               <div class="inline-flex flex-wrap items-center gap-2 text-xs font-bold text-tinki-cyanDark">
-                <span>Tecnologías: Impresión 3D | Corte Láser | Robótica</span>
+                <span>Tecnologías: Impresión 3D | Corte Láser | Modelado Digital</span>
               </div>
               <div class="text-xs text-slate-500 font-medium">
                 6 semanas (18 horas totales) • Primaria • Proyectos físicos reales • Sin inversión en equipos
@@ -180,7 +199,7 @@
             <!-- CTAs -->
             <div class="pt-2 flex flex-wrap gap-3 no-print">
               <a href="#simulador" class="px-6 py-2.5 rounded-xl bg-tinki-red hover:bg-red-600 font-display font-bold text-xs sm:text-sm text-white shadow-sm shadow-red-500/20 transition flex items-center gap-2">
-                <span>Ver simulador de ingresos 50/50</span>
+                <span>Ver simulador de ingresos</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
               </a>
               <a href="#propuesta-de-valor" class="px-5 py-2.5 rounded-xl bg-white hover:bg-slate-50 font-display font-semibold text-xs sm:text-sm text-slate-700 border border-slate-300 transition">
@@ -193,7 +212,7 @@
           <!-- Columna Derecha: Foto de Mesa Maker Studio 4:3 (Generada en alta definición, sin texto encima) -->
           <div class="lg:col-span-5 relative">
             <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg bg-white">
-              <img src="assets/images/hero-maker-generated.jpg" alt="Mesa de estudio maker STEAM con impresora 3D multicolor, laptop con modelado 3D, prototipos y herramientas" class="w-full h-auto aspect-[4/3] object-cover">
+              <img src="assets/images/hero-maker-generated.jpg" alt="Mesa de estudio maker STEAM con impresora 3D, laptop con modelado 3D, prototipos y herramientas" class="w-full h-auto aspect-[4/3] object-cover">
             </div>
           </div>
 
@@ -201,7 +220,7 @@
       </div>
     </section>
 
-    <!-- SECCIÓN: NUESTRA PROPUESTA DE VALOR -->
+    <!-- SECCIÓN: NUESTRA PROPUESTA DE VALOR (Tarjetas Horizontales Compactas 2 Col x 3 Filas) -->
     <section id="propuesta-de-valor" class="py-12 bg-white border-b border-slate-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
@@ -215,126 +234,102 @@
           </p>
         </div>
 
-        <!-- Cuadrícula Homogénea de 6 Pilares con Iconografía SVG Profesional -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Grid de 2 Columnas × 3 Filas en Formato Horizontal Compacto -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           
-          <!-- Pilar 1: Tecnología Unificada (Impresión 3D + Corte Láser) -->
-          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-xs hover:border-tinki-red hover:shadow-md transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <div class="w-11 h-11 rounded-xl bg-red-50 text-tinki-red flex items-center justify-center">
-                  <!-- SVG: Fabricación Digital / 3D & Laser -->
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-red-50 text-tinki-red uppercase tracking-wider">Equipamiento móvil</span>
-              </div>
-              <h3 class="font-display font-bold text-base text-slate-900">Tecnología de fabricación digital</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Trasladamos impresoras 3D multicarrete (hasta 4 colores simultáneos) y cortadora láser móvil con gabinete sellado y protección visual certificada.
-              </p>
+          <!-- Pilar 1: Tecnología de Fabricación Digital -->
+          <div class="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-xs transition print-break-inside flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-red-50 text-tinki-red flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-tinki-red">
-              ✓ Cero inversión ni riesgo en maquinaria para el colegio.
+            <div class="space-y-1 flex-1">
+              <h3 class="font-display font-bold text-sm sm:text-base text-slate-900">Tecnología de fabricación digital</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Trasladamos impresoras 3D multicarrete y cortadora láser móvil con gabinete sellado y protección visual certificada.
+              </p>
+              <div class="pt-1.5 text-[11px] font-semibold text-tinki-red">
+                ✓ Cero inversión ni riesgo en maquinaria para el colegio.
+              </div>
             </div>
           </div>
 
-          <!-- Pilar 2: Insumos y Materiales 100% Incluidos -->
-          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-xs hover:border-emerald-500 hover:shadow-md transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                  <!-- SVG: Paquete / Materiales -->
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 uppercase tracking-wider">Insumos 100% listos</span>
-              </div>
-              <h3 class="font-display font-bold text-base text-slate-900">Todos los materiales del taller</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Filamentos PLA ecológicos a base de almidón de maíz (atóxicos y biodegradables), planchas de madera MDF, acrílicos, pinturas, pinceles y cajas de empaque final.
-              </p>
+          <!-- Pilar 2: Insumos y Materiales Incluidos -->
+          <div class="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-xs transition print-break-inside flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-emerald-600">
-              ✓ Cero compras extras ni listas de útiles para las familias.
+            <div class="space-y-1 flex-1">
+              <h3 class="font-display font-bold text-sm sm:text-base text-slate-900">Todos los materiales del taller</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Filamentos PLA ecológicos biodegradables, madera MDF, acrílicos, pinturas acrílicas, pinceles y cajas de empaque final.
+              </p>
+              <div class="pt-1.5 text-[11px] font-semibold text-emerald-600">
+                ✓ Cero compras extras ni listas de útiles para familias.
+              </div>
             </div>
           </div>
 
           <!-- Pilar 3: Tutores Especializados en Aula -->
-          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-xs hover:border-blue-500 hover:shadow-md transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                  <!-- SVG: Tutores / Equipo en aula -->
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-blue-700 uppercase tracking-wider">Acompañamiento activo</span>
-              </div>
-              <h3 class="font-display font-bold text-base text-slate-900">Tutores especializados en aula</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Equipo con experiencia en pedagogía tecnológica infantil. Ratio asistido en sala: tutor titular más cotutor asistente si el grupo supera los 12 alumnos para máxima atención personalizada.
-              </p>
+          <div class="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-xs transition print-break-inside flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-blue-600">
-              ✓ Ratio asistido y acompañamiento uno a uno en máquina.
+            <div class="space-y-1 flex-1">
+              <h3 class="font-display font-bold text-sm sm:text-base text-slate-900">Tutores especializados en aula</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Equipo con experiencia en didáctica STEAM infantil. Tutor titular más cotutor asistente si el grupo supera 12 alumnos.
+              </p>
+              <div class="pt-1.5 text-[11px] font-semibold text-blue-600">
+                ✓ Acompañamiento personalizado en cada máquina.
+              </div>
             </div>
           </div>
 
-          <!-- Pilar 4: Metodología y Software Propio Makerdu -->
-          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-xs hover:border-tinki-cyanDark hover:shadow-md transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <div class="w-11 h-11 rounded-xl bg-cyan-50 text-tinki-cyanDark flex items-center justify-center">
-                  <!-- SVG: Software / Código / Plugins -->
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-cyan-50 text-tinki-cyanDark uppercase tracking-wider">Software & didáctica</span>
-              </div>
-              <h3 class="font-display font-bold text-base text-slate-900">Metodología y software makerdu</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Ruta paso a paso del boceto al producto físico, facilitada con entornos visuales intuitivos y <strong>plugins propios de makerdu</strong> que eliminan bloqueos técnicos para los niños.
-              </p>
+          <!-- Pilar 4: Metodología y Software Makerdu -->
+          <div class="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-xs transition print-break-inside flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-cyan-50 text-tinki-cyanDark flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-tinki-cyanDark">
-              ✓ Curva de aprendizaje fluida y sin frustración digital.
+            <div class="space-y-1 flex-1">
+              <h3 class="font-display font-bold text-sm sm:text-base text-slate-900">Metodología y software makerdu</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Ruta paso a paso facilitada con entornos visuales intuitivos y plugins propios desarrollados para modelar sin trabas técnicas.
+              </p>
+              <div class="pt-1.5 text-[11px] font-semibold text-tinki-cyanDark">
+                ✓ Curva de aprendizaje fluida y sin frustración digital.
+              </div>
             </div>
           </div>
 
           <!-- Pilar 5: Plataforma Digital de Retos 24/7 -->
-          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-xs hover:border-purple-500 hover:shadow-md transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <div class="w-11 h-11 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
-                  <!-- SVG: Pantalla / Plataforma 24/7 -->
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 uppercase tracking-wider">Acceso continuo</span>
-              </div>
-              <h3 class="font-display font-bold text-base text-slate-900">Plataforma digital 24/7</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Videotutoriales paso a paso y plantillas descargables para que los estudiantes puedan repasar y seguir creando desde casa durante la semana junto a sus familias.
-              </p>
+          <div class="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-xs transition print-break-inside flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-purple-600">
-              ✓ Seguimiento transparente y orgullo familiar.
+            <div class="space-y-1 flex-1">
+              <h3 class="font-display font-bold text-sm sm:text-base text-slate-900">Plataforma digital 24/7</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Videotutoriales paso a paso y plantillas descargables para que los estudiantes repasen y compartan logros en casa.
+              </p>
+              <div class="pt-1.5 text-[11px] font-semibold text-purple-600">
+                ✓ Continuidad del aprendizaje y orgullo familiar.
+              </div>
             </div>
           </div>
 
           <!-- Pilar 6: Convocatoria, Open Day y Certificación -->
-          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-xs hover:border-amber-500 hover:shadow-md transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
-                  <!-- SVG: Certificado / Trofeo -->
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 uppercase tracking-wider">Convocatoria & Cierre</span>
-              </div>
-              <h3 class="font-display font-bold text-base text-slate-900">Open Day y certificación oficial</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Coordinamos la clase demostrativa previa (Open Day), la feria familiar de clausura (Demo Day) y entregamos <strong>certificados oficiales compartidos</strong> con el sello del colegio.
-              </p>
+          <div class="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 hover:shadow-xs transition print-break-inside flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-amber-600">
-              ✓ Inscripciones aseguradas y prestigio institucional.
+            <div class="space-y-1 flex-1">
+              <h3 class="font-display font-bold text-sm sm:text-base text-slate-900">Open Day y certificación oficial</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Clase demostrativa previa gratuita (Open Day), feria familiar de clausura (Demo Day) y certificados con el sello del colegio.
+              </p>
+              <div class="pt-1.5 text-[11px] font-semibold text-amber-600">
+                ✓ Inscripciones aseguradas y prestigio institucional.
+              </div>
             </div>
           </div>
 
@@ -350,7 +345,7 @@
   <!-- ========================================== -->
   <div class="pdf-page-2">
 
-    <!-- SECCIÓN: METODOLOGÍA TINKILAB (EL CAMINO DE LA IDEA AL PRODUCTO) -->
+    <!-- SECCIÓN: METODOLOGÍA TINKILAB (LÍNEA DE RUTA SECUENCIAL) -->
     <section id="metodologia" class="py-12 bg-slate-50 border-b border-slate-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
@@ -359,221 +354,212 @@
             Metodología tinkiLab
           </span>
           <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Nuestra metodología: el camino de la idea al producto
+            Nuestra metodología: aprender haciendo del boceto al producto físico
           </h2>
           <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-            Inspirada en el aprendizaje práctico: los niños dejan de ser espectadores pasivos de pantallas y se convierten en creadores e inventores de sus propios objetos físicos a través de 6 etapas fluidas.
+            Inspirada en el aprendizaje práctico: los niños dejan de ser espectadores pasivos de pantallas y se convierten en creadores e inventores a través de 6 etapas conectadas.
           </p>
         </div>
 
-        <!-- Grid de las 6 Etapas con Iconos SVG Minimalistas Diseñados desde Cero -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Línea de Ruta Secuencial Conectada (Stepper 01 al 06) -->
+        <div class="relative">
+          
+          <!-- Línea Guía Conectora Horizontal (Desktop) -->
+          <div class="hidden lg:block absolute top-7 left-8 right-8 h-0.5 bg-slate-200 -z-0"></div>
 
-          <!-- 1. Imagina -->
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-tinki-cyan transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-slate-100 text-slate-700">Paso 1</span>
-                <!-- SVG Icon: Bombilla / Idea -->
-                <svg class="w-6 h-6 text-tinki-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 relative z-10">
+
+            <!-- Paso 1: Imagina -->
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-tinki-red transition flex flex-col justify-between print-break-inside">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="w-8 h-8 rounded-full bg-red-100 text-tinki-red font-extrabold text-xs flex items-center justify-center border-2 border-white shadow-xs">01</span>
+                  <span class="text-[10px] font-bold text-slate-400 uppercase">Inicio</span>
+                </div>
+                <h3 class="font-display font-bold text-sm text-slate-900">1. Imagina</h3>
+                <p class="text-[11px] text-slate-600 leading-snug">
+                  Boceto y concepto a mano alzada, proporciones y narrativa visual.
+                </p>
               </div>
-              <h3 class="font-display font-bold text-base text-slate-900">1. Imagina</h3>
-              <p class="text-xs text-tinki-red font-semibold">Boceto y proporciones en papel</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Conceptualización del proyecto, dibujo a mano alzada, proporciones y narrativa visual de la creación.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 font-medium">
-              📦 <strong>Entregable:</strong> Boceto inicial y ficha de diseño.
-            </div>
-          </div>
-
-          <!-- 2. Diseña -->
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-tinki-cyan transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-slate-100 text-slate-700">Paso 2</span>
-                <!-- SVG Icon: Pluma / Vector -->
-                <svg class="w-6 h-6 text-tinki-cyanDark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+              <div class="mt-3 pt-2 border-t border-slate-100">
+                <span class="inline-block px-2 py-0.5 rounded bg-slate-100 text-[10px] font-semibold text-slate-700">📦 Boceto en papel</span>
               </div>
-              <h3 class="font-display font-bold text-base text-slate-900">2. Diseña</h3>
-              <p class="text-xs text-tinki-cyanDark font-semibold">Curvas digitales y siluetas en pantalla</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Digitalización del trazo, vectorización de contornos y criterios de solidez geométrica (trazo continuo y base estable).
-              </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 font-medium">
-              📦 <strong>Entregable:</strong> Archivo vectorial digital (SVG).
-            </div>
-          </div>
 
-          <!-- 3. Modela -->
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-tinki-cyan transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-slate-100 text-slate-700">Paso 3</span>
-                <!-- SVG Icon: Cubo 3D -->
-                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            <!-- Paso 2: Diseña -->
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-tinki-cyanDark transition flex flex-col justify-between print-break-inside">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="w-8 h-8 rounded-full bg-cyan-100 text-tinki-cyanDark font-extrabold text-xs flex items-center justify-center border-2 border-white shadow-xs">02</span>
+                  <span class="text-[10px] font-bold text-slate-400 uppercase">Vector</span>
+                </div>
+                <h3 class="font-display font-bold text-sm text-slate-900">2. Diseña</h3>
+                <p class="text-[11px] text-slate-600 leading-snug">
+                  Digitalización del trazo y vectorización de contornos en pantalla.
+                </p>
               </div>
-              <h3 class="font-display font-bold text-base text-slate-900">3. Modela</h3>
-              <p class="text-xs text-indigo-600 font-semibold">Volumen y cuerpo sólido en 3D</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Modelado en entornos 3D intuitivos y plugins de makerdu: extrusiones, relieves por capas, tolerancias de encaje y base de soporte.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 font-medium">
-              📦 <strong>Entregable:</strong> Modelo digital 3D (STL) o plantilla.
-            </div>
-          </div>
-
-          <!-- 4. Fabrica -->
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-tinki-cyan transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-slate-100 text-slate-700">Paso 4</span>
-                <!-- SVG Icon: Impresora 3D / Capas -->
-                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+              <div class="mt-3 pt-2 border-t border-slate-100">
+                <span class="inline-block px-2 py-0.5 rounded bg-slate-100 text-[10px] font-semibold text-slate-700">📦 Archivo SVG</span>
               </div>
-              <h3 class="font-display font-bold text-base text-slate-900">4. Fabrica</h3>
-              <p class="text-xs text-emerald-600 font-semibold">Impresión 3D multicolor y manufactura</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Laminado en Slicer (alturas, densidad) y fabricación física con filamento PLA vegetal o corte láser de piezas.
-              </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 font-medium">
-              📦 <strong>Entregable:</strong> Primera pieza física en tiempo real.
-            </div>
-          </div>
 
-          <!-- 5. Detalla -->
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-tinki-cyan transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-slate-100 text-slate-700">Paso 5</span>
-                <!-- SVG Icon: Pincel / Paleta -->
-                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4 5 5 0 014-5h.586l1.707-1.707A1 1 0 0110 10h4a1 1 0 01.707.293l1.707 1.707H17a5 5 0 014 5 4 4 0 01-4 4H7z"></path></svg>
+            <!-- Paso 3: Modela -->
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-indigo-500 transition flex flex-col justify-between print-break-inside">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-extrabold text-xs flex items-center justify-center border-2 border-white shadow-xs">03</span>
+                  <span class="text-[10px] font-bold text-slate-400 uppercase">3D</span>
+                </div>
+                <h3 class="font-display font-bold text-sm text-slate-900">3. Modela</h3>
+                <p class="text-[11px] text-slate-600 leading-snug">
+                  Volumen 3D con software intuitivo y plugins propios de makerdu.
+                </p>
               </div>
-              <h3 class="font-display font-bold text-base text-slate-900">5. Detalla</h3>
-              <p class="text-xs text-purple-600 font-semibold">Pinturas acrílicas, color y post-procesado</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Retiro de soportes, pulido y aplicación de técnicas de pintura acrílica, contrastes de color y barniz protector.
-              </p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 font-medium">
-              📦 <strong>Entregable:</strong> Pieza terminada y acabada como producto.
-            </div>
-          </div>
-
-          <!-- 6. Presenta -->
-          <div class="p-5 rounded-2xl bg-white border-2 border-amber-200 shadow-xs hover:border-amber-400 transition print-break-inside flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-amber-100 text-amber-800">Paso 6</span>
-                <!-- SVG Icon: Trofeo / Feria -->
-                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+              <div class="mt-3 pt-2 border-t border-slate-100">
+                <span class="inline-block px-2 py-0.5 rounded bg-slate-100 text-[10px] font-semibold text-slate-700">📦 Modelo 3D (STL)</span>
               </div>
-              <h3 class="font-display font-bold text-base text-slate-900">6. Presenta</h3>
-              <p class="text-xs text-amber-600 font-semibold">Packaging, marca y Demo Day familiar</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Diseño de empaque coleccionable, tarjeta de autor y presentación en la feria de clausura frente a las familias.
-              </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-amber-700 font-bold">
-              📦 <strong>Gran Cierre:</strong> Colección empaquetada + Certificado.
-            </div>
-          </div>
 
+            <!-- Paso 4: Fabrica -->
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-emerald-500 transition flex flex-col justify-between print-break-inside">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 font-extrabold text-xs flex items-center justify-center border-2 border-white shadow-xs">04</span>
+                  <span class="text-[10px] font-bold text-slate-400 uppercase">Máquinas</span>
+                </div>
+                <h3 class="font-display font-bold text-sm text-slate-900">4. Fabrica</h3>
+                <p class="text-[11px] text-slate-600 leading-snug">
+                  Fabricación física con impresora 3D en PLA vegetal o cortadora láser.
+                </p>
+              </div>
+              <div class="mt-3 pt-2 border-t border-slate-100">
+                <span class="inline-block px-2 py-0.5 rounded bg-slate-100 text-[10px] font-semibold text-slate-700">📦 Pieza en físico</span>
+              </div>
+            </div>
+
+            <!-- Paso 5: Detalla -->
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-purple-500 transition flex flex-col justify-between print-break-inside">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 font-extrabold text-xs flex items-center justify-center border-2 border-white shadow-xs">05</span>
+                  <span class="text-[10px] font-bold text-slate-400 uppercase">Arte</span>
+                </div>
+                <h3 class="font-display font-bold text-sm text-slate-900">5. Detalla</h3>
+                <p class="text-[11px] text-slate-600 leading-snug">
+                  Pintura a mano con plumones acrílicos Posca, encajes y pulido.
+                </p>
+              </div>
+              <div class="mt-3 pt-2 border-t border-slate-100">
+                <span class="inline-block px-2 py-0.5 rounded bg-slate-100 text-[10px] font-semibold text-slate-700">📦 Objeto pintado</span>
+              </div>
+            </div>
+
+            <!-- Paso 6: Presenta -->
+            <div class="p-4 rounded-2xl bg-white border-2 border-amber-300 shadow-xs hover:border-amber-400 transition flex flex-col justify-between print-break-inside">
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="w-8 h-8 rounded-full bg-amber-400 text-slate-950 font-black text-xs flex items-center justify-center border-2 border-white shadow-xs">06</span>
+                  <span class="text-[10px] font-bold text-amber-700 uppercase">Cierre</span>
+                </div>
+                <h3 class="font-display font-bold text-sm text-slate-900">6. Presenta</h3>
+                <p class="text-[11px] text-slate-600 leading-snug">
+                  Empaque en cajita kraft de autor y Demo Day frente a las familias.
+                </p>
+              </div>
+              <div class="mt-3 pt-2 border-t border-amber-200">
+                <span class="inline-block px-2 py-0.5 rounded bg-amber-50 text-[10px] font-bold text-amber-800">📦 Caja + Diploma</span>
+              </div>
+            </div>
+
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SECCIÓN: POSIBILIDADES DE TALLER (ADAPTADAS A LA COMUNIDAD DEL COLEGIO) -->
+    <!-- SECCIÓN: TALLER INTEGRAL (3 HITOS DE PROYECTO REAL) -->
     <section id="talleres" class="py-12 bg-white border-b border-slate-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
         <div class="max-w-3xl mx-auto text-center space-y-1.5 mb-10">
-          <span class="text-xs font-bold text-tinki-cyanDark uppercase tracking-widest">Catálogo modular de verano</span>
+          <span class="text-xs font-bold text-tinki-cyanDark uppercase tracking-widest">Programa vacacional integral</span>
           <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Posibilidades de taller para Mater Admirabilis
+            Taller Integral: Club de Pequeños Creadores STEAM
           </h2>
           <p class="text-slate-600 text-xs sm:text-sm">
-            Propuestas flexibles que se calibran junto con la dirección según la edad de los grupos y el aforo del aula de cómputo.
+            Un viaje de 6 semanas (12 sesiones • 18 horas) donde cada estudiante diseña, fabrica y se lleva a casa 3 grandes proyectos de autor con empaque profesional.
           </p>
         </div>
 
-        <!-- 3 Ámbitos de Creación con Imágenes de Estudio Diseñadas desde Cero -->
+        <!-- 3 Hitos de Creación con Fotos Reales de los Proyectos -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          <!-- Ámbito 1: Primaria Menor (Impresión 3D) -->
+          <!-- Hito 1: Digitoys 2.5D -->
           <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xs hover:shadow-md transition print-break-inside flex flex-col justify-between">
             <div>
-              <div class="h-44 bg-slate-50 overflow-hidden border-b border-slate-100">
-                <img src="assets/images/taller-juguetes-3d.jpg" alt="Juguetes y personajes coleccionables impresos en 3D" class="w-full h-full object-cover">
+              <div class="h-48 bg-slate-50 overflow-hidden border-b border-slate-100">
+                <img src="assets/images/hito1-digitoys-caja.jpg" alt="Personaje coleccionable Digitoys en cajita kraft con ventana" class="w-full h-full object-cover">
               </div>
               <div class="p-5 space-y-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-red-50 text-tinki-red inline-block">
-                  Primaria Menor • 7 a 9 años
+                  Hito 1 • Semanas 1 y 2 (Impresión 3D)
                 </span>
                 <h3 class="font-display font-bold text-base text-slate-900 leading-snug">
-                  Creación de juguetes, personajes y coleccionables 3D
+                  Personaje coleccionable Digitoys 2.5D
                 </h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
-                  Modelado intuitivo de personajes, extrusión de volúmenes y fabricación con impresión 3D multicolor. Cada estudiante diseña y se lleva su propio robot o personaje articulado a casa.
+                  Del boceto en papel al modelado 2.5D en makerdu. Se imprime en PLA ecológico, el alumno lo pinta con marcadores acrílicos Posca y se entrega en su <strong>cajita de colección kraft con ventana transparente</strong>.
                 </p>
               </div>
             </div>
-            <div class="p-5 pt-0 border-t border-slate-100 text-[11px] text-slate-500 flex justify-between items-center">
-              <span>6 semanas • 18 horas</span>
-              <span class="font-bold text-emerald-600">Recomendado</span>
+            <div class="p-5 pt-0 border-t border-slate-100 text-[11px] font-semibold text-emerald-600">
+              ✓ Se llevan a casa: Su juguete coleccionable en caja de autor.
             </div>
           </div>
 
-          <!-- Ámbito 2: Primaria Mayor (Corte Láser) -->
+          <!-- Hito 2: Escudo de Mochila & Bisutería -->
           <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xs hover:shadow-md transition print-break-inside flex flex-col justify-between">
             <div>
-              <div class="h-44 bg-slate-50 overflow-hidden border-b border-slate-100">
-                <img src="assets/images/taller-corte-laser.jpg" alt="Diseño de estructuras, lámparas y cofres con corte láser" class="w-full h-full object-cover">
+              <div class="h-48 bg-slate-50 overflow-hidden border-b border-slate-100">
+                <img src="assets/images/hito2-accesorios-creadores.jpg" alt="Club de Creadores: Bisutería, llaveros y accesorios cortados con láser" class="w-full h-full object-cover">
               </div>
               <div class="p-5 space-y-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-cyan-50 text-tinki-cyanDark inline-block">
-                  Primaria Mayor • 10 a 12 años
+                  Hito 2 • Semanas 3 y 4 (Corte Láser)
                 </span>
                 <h3 class="font-display font-bold text-base text-slate-900 leading-snug">
-                  Diseño de estructuras, lámparas y cofres con corte láser
+                  Escudo de mochila y accesorios de autor
                 </h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
-                  Vectorización de siluetas, cálculo de ensambles geométricos en madera y acrílico, y corte láser de alta precisión. Proyecto final: lámpara decorativa de autor con encajes reales.
+                  Diseño vectorial y corte láser de precisión. Cada alumno diseña el <strong>escudo con su nombre en relieve para su mochila escolar</strong>, además de llaveros o aretes con patrones andinos (chakana) o botánicos.
                 </p>
               </div>
             </div>
-            <div class="p-5 pt-0 border-t border-slate-100 text-[11px] text-slate-500 flex justify-between items-center">
-              <span>6 semanas • 18 horas</span>
-              <span class="font-bold text-indigo-600">Precisión & Ensamble</span>
+            <div class="p-5 pt-0 border-t border-slate-100 text-[11px] font-semibold text-indigo-600">
+              ✓ Se llevan a casa: Escudo de mochila con nombre + llavero/bisutería.
             </div>
           </div>
 
-          <!-- Ámbito 3: Robótica e Inventos Interactivos -->
+          <!-- Hito 3: Diorama Multicapa + Demo Day -->
           <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xs hover:shadow-md transition print-break-inside flex flex-col justify-between">
             <div>
-              <div class="h-44 bg-slate-50 overflow-hidden border-b border-slate-100">
-                <img src="assets/images/taller-robotica.jpg" alt="Robótica educativa, mecanismos e inventos interactivos" class="w-full h-full object-cover">
+              <div class="h-48 bg-slate-50 overflow-hidden border-b border-slate-100">
+                <img src="assets/images/hito3-diorama-madera.png" alt="Diorama multicapa en madera cortada con láser" class="w-full h-full object-cover">
               </div>
               <div class="p-5 space-y-2">
                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-amber-700 inline-block">
-                  Primaria • 8 a 12 años • Integral
+                  Hito 3 • Semanas 5 y 6 (Ensamble & Clausura)
                 </span>
                 <h3 class="font-display font-bold text-base text-slate-900 leading-snug">
-                  Robótica educativa, mecanismos e inventos interactivos
+                  Cuadro diorama multicapa en madera
                 </h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
-                  Integración de chasis personalizados en madera y 3D con motores, sensores de distancia y luces programables. Los inventos cobran movimiento y reaccionan de manera interactiva.
+                  Fabricación y ensamble de un <strong>cuadro diorama 3D con planos de profundidad</strong> en capas de madera cortadas en láser. En la sesión 12, exposición familiar (Demo Day) y entrega de certificados oficiales.
                 </p>
               </div>
             </div>
-            <div class="p-5 pt-0 border-t border-slate-100 text-[11px] text-slate-500 flex justify-between items-center">
-              <span>6 semanas • 18 horas</span>
-              <span class="font-bold text-amber-600">Innovación STEAM</span>
+            <div class="p-5 pt-0 border-t border-slate-100 text-[11px] font-semibold text-amber-600">
+              ✓ Se llevan a casa: Cuadro diorama 3D decorativo + Certificado.
             </div>
           </div>
 
@@ -660,7 +646,7 @@
                 <div>
                   <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-tinki-cyan text-slate-900 uppercase mb-1">Recomendado • 50% / 50%</span>
                   <h4 class="font-display font-bold text-sm sm:text-base text-white">Alianza compartida 50 / 50</h4>
-                  <p class="text-xs text-slate-400 mt-1">Mitad y mitad: de cada matrícula de S/ 350, S/ 175 son para el colegio y S/ 175 para tinkiLab. Sin cuota fija mínima.</p>
+                  <p class="text-xs text-slate-400 mt-1">Reparto equitativo: de cada matrícula de S/ 350, S/ 175 son para el colegio y S/ 175 para tinkiLab. Sin cuota fija mínima ni riesgo operativo.</p>
                 </div>
                 <input type="radio" name="modelo" value="comision" checked class="mt-1 accent-tinki-cyan">
               </div>
@@ -675,7 +661,7 @@
                 <div>
                   <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-tinki-red text-white uppercase mb-1">Tarifa Plana</span>
                   <h4 class="font-display font-bold text-sm sm:text-base text-white">Paquete llave en mano</h4>
-                  <p class="text-xs text-slate-400 mt-1">El colegio recauda las inscripciones y cubre la tarifa acordada de tinkiLab (S/ 2,200). Todo el excedente es ganancia del colegio.</p>
+                  <p class="text-xs text-slate-400 mt-1">El colegio recauda las inscripciones y cubre la tarifa base acordada de tinkiLab (desde S/ 2,500 por grupo). Todo el excedente es ganancia del colegio.</p>
                 </div>
                 <input type="radio" name="modelo" value="fijo" class="mt-1 accent-tinki-red">
               </div>
@@ -772,14 +758,14 @@
             </ul>
           </div>
 
-          <!-- tinkiLab (Limpio sin redundancia de nombre) -->
+          <!-- tinkiLab (Limpio con Logo Transparente Oficial) -->
           <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2.5 print-break-inside">
             <div class="flex items-center gap-2 pb-2 border-b border-slate-200">
-              <img src="assets/images/logo-tinkilab.png" alt="tinkiLab" class="h-5 w-auto">
+              <img src="assets/images/logo-tinkilab.png" alt="tinkiLab" class="h-6 w-auto object-contain">
             </div>
             <ul class="space-y-1.5 text-[11px] text-slate-700">
               <li class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Tutores tinkiLab especializados</strong> en educación STEAM.</span></li>
-              <li class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Impresora 3D multicolor y cortadora láser</strong> instaladas y operadas.</span></li>
+              <li class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Impresoras 3D y cortadora láser</strong> instaladas y operadas.</span></li>
               <li class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Todos los materiales e insumos incluidos</strong> (PLA, maderas, pinturas, cajas).</span></li>
               <li class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Plataforma digital 24/7</strong> y certificados oficiales compartidos.</span></li>
             </ul>
@@ -910,17 +896,17 @@
         if (r.checked) modeloSeleccionado = r.value;
       });
 
-      let tarifaFijaTinki = 2200;
+      let tarifaFijaTinki = 2500;
       let infoTutor = '👥 Tutores especializados tinkiLab en aula.';
 
       if (formatoActual === 'estandar') {
-        tarifaFijaTinki = 2200;
+        tarifaFijaTinki = 2500;
         infoTutor = '👥 1 Tutor titular tinkiLab en aula (S/ 75/h × 18h = S/ 1,350) + materiales e insumos incluidos.';
       } else if (formatoActual === 'grande') {
-        tarifaFijaTinki = 3200;
+        tarifaFijaTinki = 3500;
         infoTutor = '👥 1 Tutor titular (S/ 75/h) + 1 Cotutor asistente (S/ 50/h) en aula (S/ 2,250) + materiales e insumos incluidos.';
       } else if (formatoActual === 'doble') {
-        tarifaFijaTinki = 4000;
+        tarifaFijaTinki = 4500;
         infoTutor = '🔄 2 Turnos paralelos con tutores especializados (Mañana Primaria Menor + Tarde Primaria Mayor).';
       }
 
