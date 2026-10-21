@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Términos de Referencia & Propuesta Técnica • Taller STEAM tinkiLab × Ingenio Learning</title>
+  <title>Términos de referencia y propuesta técnica • Taller STEAM tinkiLab × Ingenio Learning</title>
   <link rel="icon" type="image/png" href="assets/images/favicon-tinkilab.png">
 
   <!-- Google Fonts -->
@@ -38,12 +38,12 @@
 
   <style>
     @page {
-      size: A4;
-      margin: 12mm 14mm 12mm 14mm;
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
     }
     @media print {
       .no-print { display: none !important; }
-      body { background: white !important; padding: 0 !important; font-size: 11px !important; }
+      body { background: white !important; padding: 0 !important; font-size: 10.5px !important; }
       .page-sheet {
         page-break-after: always;
         break-after: page;
@@ -52,7 +52,12 @@
         border-radius: 0 !important;
         margin: 0 !important;
         padding: 0 !important;
-        min-height: auto !important;
+        min-height: 270mm !important;
+        max-height: 275mm !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
       }
       .page-sheet:last-child {
         page-break-after: avoid;
@@ -63,7 +68,7 @@
 </head>
 <body class="bg-slate-100 text-slate-800 font-sans antialiased py-6 sm:py-10 space-y-8">
 
-  <!-- BARRA DE ACCIÓN FLOTANTE (Solo pantalla) -->
+  <!-- BARRA DE ACCIÓN FLOTANTE (Solo visible en pantalla) -->
   <div class="no-print fixed top-4 right-4 z-50 flex items-center gap-2">
     <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow-xl transition flex items-center gap-2 cursor-pointer">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
@@ -73,48 +78,48 @@
 
 
   <!-- ========================================================================= -->
-  <!-- PÁGINA 1: CARÁTULA EJECUTIVA (A4 EXACTO)                                 -->
+  <!-- PÁGINA 1: CARÁTULA EJECUTIVA                                              -->
   <!-- ========================================================================= -->
-  <div class="page-sheet max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden p-12 sm:p-16 flex flex-col justify-between min-h-[960px]">
+  <div class="page-sheet max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden p-12 sm:p-16 flex flex-col justify-between min-h-[920px]">
     
-    <!-- Header de Carátula -->
+    <!-- Encabezado superior sutil -->
     <div class="flex items-center justify-between border-b border-slate-200 pb-4">
-      <span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Documento Técnico B2B</span>
+      <span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Documento técnico institucional</span>
       <span class="text-[11px] font-bold text-tinki-cyanDark uppercase tracking-wider">Verano 2027</span>
     </div>
 
-    <!-- Centro de Carátula: Logo e Identidad -->
+    <!-- Centro de carátula: Logo e información principal -->
     <div class="my-auto text-center space-y-8 py-10">
       <div class="flex justify-center">
         <img src="assets/images/logo-tinkilab.png" alt="tinkiLab" class="h-16 sm:h-20 w-auto object-contain">
       </div>
 
-      <div class="space-y-3 max-w-xl mx-auto">
+      <div class="space-y-3.5 max-w-xl mx-auto">
         <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200 uppercase tracking-wider">
-          Ficha Técnica & Términos de Referencia
+          Términos de referencia y propuesta técnica
         </div>
         <h1 class="font-display font-extrabold text-2xl sm:text-4xl text-slate-900 leading-tight">
-          Programa Vacacional STEAM & Fabricación Digital
+          Programa vacacional STEAM y fabricación digital
         </h1>
         <p class="text-sm sm:text-base text-slate-600 font-medium">
-          Diseño 3D, Fabricación Aditiva, Corte Láser y Plataforma E-Learning
+          Diseño 3D, fabricación aditiva, corte láser y campus virtual
         </p>
       </div>
 
       <div class="w-16 h-1 bg-tinki-red mx-auto rounded-full"></div>
     </div>
 
-    <!-- Metadatos de Pie de Carátula -->
+    <!-- Metadatos de directorio al pie -->
     <div class="pt-6 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-600">
       <div>
-        <div class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Preparado Para:</div>
+        <div class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Preparado para:</div>
         <div class="font-bold text-slate-900 text-sm mt-0.5">Ingenio Learning (ON Empresas)</div>
-        <div class="text-[11px] text-slate-500">Dirección Ejecutiva & Directorio</div>
+        <div class="text-[11px] text-slate-500">Dirección ejecutiva y directorio</div>
       </div>
       <div class="sm:text-right">
-        <div class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Entidad Proponente:</div>
+        <div class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Entidad proponente:</div>
         <div class="font-bold text-slate-900 text-sm mt-0.5">tinkiLab</div>
-        <div class="text-[11px] text-slate-500">Laboratorio de Fabricación Digital & Educación STEAM</div>
+        <div class="text-[11px] text-slate-500">Laboratorio de fabricación digital y educación STEAM</div>
       </div>
     </div>
 
@@ -122,149 +127,147 @@
 
 
   <!-- ========================================================================= -->
-  <!-- PÁGINA 2: FUNDAMENTO TÉCNICO, ENTREGABLES & PLATAFORMA (A4 EXACTO)        -->
+  <!-- PÁGINA 2: FUNDAMENTO TÉCNICO, ENTREGABLES Y PLATAFORMA                    -->
   <!-- ========================================================================= -->
-  <div class="page-sheet max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden p-8 sm:p-10 space-y-6 min-h-[960px]">
+  <div class="page-sheet max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden p-8 sm:p-10 space-y-5 min-h-[920px]">
     
-    <!-- Encabezado de Página -->
+    <!-- Encabezado de página -->
     <div class="flex items-center justify-between pb-3 border-b border-slate-200 text-xs">
       <div class="flex items-center gap-2">
         <img src="assets/images/logo-tinkilab.png" alt="tinkiLab" class="h-5 w-auto object-contain">
         <span class="text-slate-300">|</span>
-        <span class="font-bold text-slate-700">1. Fundamento Técnico & Proyectos Entregables</span>
+        <span class="font-bold text-slate-700">1. Fundamento técnico y proyectos de temporada</span>
       </div>
       <span class="text-slate-400 font-medium text-[11px]">Página 2</span>
     </div>
 
-    <!-- 1. PLANA DOCENTE & DIRECCIÓN TÉCNICA -->
-    <div class="space-y-2.5">
+    <!-- 1. EQUIPO DOCENTE Y DIRECCIÓN TÉCNICA -->
+    <div class="space-y-2">
       <div class="flex items-center justify-between">
         <h2 class="font-display font-bold text-sm text-slate-900 flex items-center gap-2">
           <span class="w-5 h-5 rounded-md bg-tinki-cyanDark text-white flex items-center justify-center text-[10px] font-bold">1</span>
-          Equipo Docente & Dirección Técnica
+          Equipo docente y dirección técnica
         </h2>
-        <span class="text-[10.5px] font-bold text-slate-500">Ratio: 2 Tutores por turno (hasta 20 alumnos)</span>
+        <span class="text-[10px] font-bold text-slate-500">Ratio: 2 tutores por turno (hasta 20 alumnos)</span>
       </div>
       
-      <p class="text-[11px] text-slate-600 leading-relaxed text-justify">
-        El programa cuenta con dirección y supervisión técnica a cargo de graduados del <strong>Fab Academy</strong>, asegurando protocolos de seguridad en maquinaria y atención personalizada:
+      <p class="text-[10.5px] text-slate-600 leading-relaxed text-justify">
+        El programa cuenta con dirección y supervisión técnica a cargo de graduados del <strong>Fab Academy</strong>, asegurando protocolos de seguridad en maquinaria y atención personalizada en aula:
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
           <div class="flex items-center justify-between">
             <span class="font-bold text-xs text-slate-900">Henry Sánchez</span>
-            <span class="px-2 py-0.5 rounded text-[9.5px] font-bold bg-red-100 text-tinki-red">Graduado Fab Academy 2015</span>
+            <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-red-100 text-tinki-red">Graduado Fab Academy 2015</span>
           </div>
-          <p class="text-[10.5px] text-slate-600 leading-snug">
-            Director y educador maker en tinkiLab. Especialista en fabricación digital distribuida, diseño paramétrico y gestión de makerspaces.
+          <p class="text-[10px] text-slate-600 leading-snug">
+            Director y educador maker en tinkiLab. Especialista en fabricación digital distribuida, diseño paramétrico y gestión de laboratorios de innovación.
           </p>
         </div>
 
         <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
           <div class="flex items-center justify-between">
             <span class="font-bold text-xs text-slate-900">María Ángela Mejía</span>
-            <span class="px-2 py-0.5 rounded text-[9.5px] font-bold bg-cyan-100 text-tinki-cyanDark">Graduada Fab Academy 2024</span>
+            <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-cyan-100 text-tinki-cyanDark">Graduada Fab Academy 2024</span>
           </div>
-          <p class="text-[10.5px] text-slate-600 leading-snug">
+          <p class="text-[10px] text-slate-600 leading-snug">
             Coordinación pedagógica STEAM en tinkiLab. Especialista en metodologías de aprendizaje activo, volumetría y ensambles mecánicos.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- 2. SOFTWARE EN LA NUBE & PLATAFORMA E-LEARNING TINKILAB -->
-    <div class="space-y-2.5">
+    <!-- 2. HERRAMIENTAS DE SOFTWARE Y CAMPUS VIRTUAL -->
+    <div class="space-y-2">
       <h2 class="font-display font-bold text-sm text-slate-900 flex items-center gap-2">
         <span class="w-5 h-5 rounded-md bg-tinki-red text-white flex items-center justify-center text-[10px] font-bold">2</span>
-        Herramientas de Software & Plataforma E-Learning
+        Herramientas de software y campus virtual
       </h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         
-        <!-- Software Cloud -->
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-white space-y-1.5">
+        <div class="p-3 rounded-xl border border-slate-200 bg-white space-y-1">
           <div class="font-bold text-xs text-slate-900 flex items-center gap-1.5">
-            <span>🌐</span> Suite de Software en la Nube (Cero Licencias)
+            <span>🌐</span> Software en la nube (cero licencias)
           </div>
-          <p class="text-[10.5px] text-slate-600 leading-relaxed text-justify">
-            Uso de <strong>Autodesk Tinkercad</strong>, herramientas vectoriales SVG y <strong>miniapps interactivas propietarias de tinkiLab</strong> ejecutadas directamente en navegador Google Chrome. <strong>Cero costo en licencias para la empresa</strong>.
+          <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
+            Uso de <strong>Autodesk Tinkercad</strong>, diseño vectorial SVG y <strong>miniapps interactivas propietarias de tinkiLab</strong> ejecutadas en navegador Google Chrome. Sin costo de licencias ni instalaciones pesadas.
           </p>
         </div>
 
-        <!-- Campus Virtual / E-learning -->
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 space-y-1.5">
+        <div class="p-3 rounded-xl border border-slate-200 bg-slate-50 space-y-1">
           <div class="font-bold text-xs text-slate-900 flex items-center gap-1.5">
-            <span>🎓</span> Plataforma E-Learning (Campus Virtual)
+            <span>🎓</span> Campus virtual de acompañamiento
           </div>
-          <p class="text-[10.5px] text-slate-600 leading-relaxed text-justify">
-            Cada participante cuenta con acceso a un entorno virtual que aloja guías interactivas paso a paso, repositorio de archivos 3D/vectoriales de cada sesión y registro digital de proyectos para acompañamiento desde casa.
+          <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
+            Entorno virtual interactivo para cada participante con guías paso a paso, repositorio de archivos 3D/SVG de cada sesión y registro digital de proyectos para acceso continuo desde casa.
           </p>
         </div>
 
       </div>
     </div>
 
-    <!-- 3. PROYECTOS FÍSICOS ENTREGABLES POR PARTICIPANTE -->
-    <div class="space-y-2.5">
+    <!-- 3. PROYECTOS OFICIALES DE TEMPORADA -->
+    <div class="space-y-2">
       <h2 class="font-display font-bold text-sm text-slate-900 flex items-center gap-2">
         <span class="w-5 h-5 rounded-md bg-amber-500 text-white flex items-center justify-center text-[10px] font-bold">3</span>
-        Proyectos Oficiales de Temporada (Cada participante diseña y se lleva a casa)
+        Proyectos oficiales de temporada (cada participante diseña y se lleva a casa)
       </h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         
         <!-- Proyecto 1: Digitoys -->
-        <div class="p-4 rounded-xl border border-slate-200 bg-white space-y-2 shadow-xs">
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-white space-y-1.5 shadow-xs">
           <div class="flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded text-[9.5px] font-bold bg-orange-50 text-orange-600 uppercase">
-              Proyecto 01 • Semanas 1 a 3
+            <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-orange-50 text-orange-600 uppercase">
+              Proyecto 1 • Semanas 1 a 3
             </span>
-            <span class="text-[10px] text-slate-500 font-semibold">Modelado 3D & FDM</span>
+            <span class="text-[9.5px] text-slate-500 font-semibold">Modelado 3D e impresión FDM</span>
           </div>
           <h3 class="font-display font-bold text-xs text-slate-900">
-            Personaje coleccionable Digitoys 2.5D
+            Personajes coleccionables Digitoys 2.5D
           </h3>
-          <p class="text-[10.5px] text-slate-600 leading-relaxed text-justify">
+          <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
             Del boceto en papel al modelado digital en makerdu. Cada participante diseña su propio personaje, lo imprime en filamento biodegradable PLA y le da acabado artístico con pinturas acrílicas al agua y rotuladores de precisión, montándolo sobre su base de exhibición.
           </p>
-          <div class="pt-1.5 border-t border-slate-100 text-[10px] font-semibold text-emerald-600">
-            ✓ Se llevan a casa en Semana 3: Escultura Digitoys terminada.
+          <div class="pt-1 border-t border-slate-100 text-[9.5px] font-semibold text-emerald-600">
+            ✓ Se llevan a casa en semana 3: Escultura Digitoys terminada.
           </div>
         </div>
 
         <!-- Proyecto 2: Diorama -->
-        <div class="p-4 rounded-xl border border-slate-200 bg-white space-y-2 shadow-xs">
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-white space-y-1.5 shadow-xs">
           <div class="flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded text-[9.5px] font-bold bg-cyan-50 text-tinki-cyanDark uppercase">
-              Proyecto 02 • Semanas 4 a 6
+            <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-cyan-50 text-tinki-cyanDark uppercase">
+              Proyecto 2 • Semanas 4 a 6
             </span>
-            <span class="text-[10px] text-slate-500 font-semibold">Corte Láser & Ensamble 3D</span>
+            <span class="text-[9.5px] text-slate-500 font-semibold">Corte láser y ensamble 3D</span>
           </div>
           <h3 class="font-display font-bold text-xs text-slate-900">
             Diorama multicapa en madera MDF
           </h3>
-          <p class="text-[10.5px] text-slate-600 leading-relaxed text-justify">
+          <p class="text-[10px] text-slate-600 leading-relaxed text-justify">
             Diseño vectorial y ensamble tridimensional. Cada participante diseña siluetas por planos de profundidad cortadas con máxima precisión en cortadora láser. Ensamblan la caja mediante encajes de madera y la presentan al cierre del taller.
           </p>
-          <div class="pt-1.5 border-t border-slate-100 text-[10px] font-semibold text-tinki-cyanDark">
-            ✓ Se llevan a casa en Semana 6: Cuadro diorama 3D ensamblado.
+          <div class="pt-1 border-t border-slate-100 text-[9.5px] font-semibold text-tinki-cyanDark">
+            ✓ Se llevan a casa en semana 6: Cuadro diorama 3D ensamblado.
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- Equipamiento Físico en Resumen -->
+    <!-- Maquinaria trasladada en resumen -->
     <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs text-slate-700">
       <div class="flex items-center gap-2">
-        <span class="font-bold text-slate-900">Maquinaria Trasladada a Sede:</span>
-        <span>1 Cortadora Láser de diodo de alta precisión (área útil 268 × 358 mm)</span>
+        <span class="font-bold text-slate-900">Equipamiento técnico en sede:</span>
+        <span>1 Cortadora láser de diodo (área 268 × 358 mm)</span>
         <span>•</span>
         <span>1 Impresora 3D de alta velocidad FDM</span>
       </div>
-      <span class="text-[10.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-        100% Operadas por Tutores
+      <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+        Operadas 100% por tutores
       </span>
     </div>
 
@@ -272,110 +275,110 @@
 
 
   <!-- ========================================================================= -->
-  <!-- PÁGINA 3: CRONOGRAMA, OPERACIÓN & PRESUPUESTO (A4 EXACTO)                 -->
+  <!-- PÁGINA 3: CRONOGRAMA OPERATIVO Y PRESUPUESTO CON COFINANCIAMIENTO         -->
   <!-- ========================================================================= -->
-  <div class="page-sheet max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden p-8 sm:p-10 space-y-6 min-h-[960px]">
+  <div class="page-sheet max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden p-8 sm:p-10 space-y-4 min-h-[920px]">
     
-    <!-- Encabezado de Página -->
+    <!-- Encabezado de página -->
     <div class="flex items-center justify-between pb-3 border-b border-slate-200 text-xs">
       <div class="flex items-center gap-2">
         <img src="assets/images/logo-tinkilab.png" alt="tinkiLab" class="h-5 w-auto object-contain">
         <span class="text-slate-300">|</span>
-        <span class="font-bold text-slate-700">2. Cronograma Operativo & Presupuesto Desglosado</span>
+        <span class="font-bold text-slate-700">2. Cronograma operativo y presupuesto de inversión</span>
       </div>
       <span class="text-slate-400 font-medium text-[11px]">Página 3</span>
     </div>
 
-    <!-- 4. CRONOGRAMA EN 12 SESIONES CON 3 HITOS DE TRASLADO DE MÁQUINAS -->
-    <div class="space-y-2.5">
+    <!-- 4. CRONOGRAMA OPERATIVO (12 SESIONES • 18 HORAS TOTALES) -->
+    <div class="space-y-1.5">
       <div class="flex items-center justify-between">
-        <h2 class="font-display font-bold text-sm text-slate-900 flex items-center gap-2">
-          <span class="w-5 h-5 rounded-md bg-purple-600 text-white flex items-center justify-center text-[10px] font-bold">4</span>
-          Cronograma Operativo (12 Sesiones • 6 Semanas)
+        <h2 class="font-display font-bold text-xs text-slate-900 flex items-center gap-2">
+          <span class="w-4 h-4 rounded bg-purple-600 text-white flex items-center justify-center text-[9px] font-bold">4</span>
+          Cronograma operativo (12 sesiones • 18 horas de dictado en aula)
         </h2>
-        <span class="text-[10px] font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">
-          3 Traslados Puntuales de Maquinaria
+        <span class="text-[9px] font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">
+          3 traslados estratégicos de maquinaria
         </span>
       </div>
 
-      <div class="border border-slate-200 rounded-xl overflow-hidden shadow-xs text-xs">
+      <div class="border border-slate-200 rounded-xl overflow-hidden text-xs">
         <table class="w-full text-left border-collapse">
           <thead>
-            <tr class="bg-slate-100 text-slate-700 text-[10px] font-bold border-b border-slate-200 uppercase">
-              <th class="p-2">Sem.</th>
-              <th class="p-2">Sesiones</th>
-              <th class="p-2">Proyecto / Actividad</th>
-              <th class="p-2">Contenido Pedagógico & Práctico</th>
-              <th class="p-2 text-center">Maquinaria en Aula</th>
+            <tr class="bg-slate-100 text-slate-700 text-[9.5px] font-bold border-b border-slate-200 uppercase">
+              <th class="p-1.5">Semana</th>
+              <th class="p-1.5">Sesiones</th>
+              <th class="p-1.5">Proyecto</th>
+              <th class="p-1.5">Contenido práctico en aula</th>
+              <th class="p-1.5 text-center">Maquinaria en aula</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-slate-200 text-[10.5px]">
+          <tbody class="divide-y divide-slate-200 text-[10px]">
             
             <tr>
-              <td class="p-2 font-bold text-slate-900 bg-slate-50/50">Sem 1</td>
-              <td class="p-2 text-slate-600">Ses. 01 y 02</td>
-              <td class="p-2 font-semibold text-orange-600">Digitoys 2.5D</td>
-              <td class="p-2 text-slate-600">Boceto conceptual en papel e introducción al software de modelado 3D.</td>
-              <td class="p-2 text-center text-slate-400 font-medium">Solo Computadoras</td>
+              <td class="p-1.5 font-bold text-slate-900 bg-slate-50/50">Semana 1</td>
+              <td class="p-1.5 text-slate-600">Ses. 01 y 02</td>
+              <td class="p-1.5 font-semibold text-orange-600">Digitoys 2.5D</td>
+              <td class="p-1.5 text-slate-600">Bocetado de siluetas e inicio del modelado 3D en computadoras.</td>
+              <td class="p-1.5 text-center text-slate-400 font-medium">Solo computadoras</td>
             </tr>
 
             <tr class="bg-amber-50/50 border-l-4 border-l-amber-500">
-              <td class="p-2 font-bold text-amber-900">Sem 2</td>
-              <td class="p-2 font-bold text-amber-900">Ses. 03 o 04</td>
-              <td class="p-2 font-bold text-amber-900">Digitoys 2.5D</td>
-              <td class="p-2 text-slate-700">
-                <strong>HITO 1:</strong> Calibración, laminado e impresión 3D en vivo de las primeras piezas.
+              <td class="p-1.5 font-bold text-amber-900">Semana 2</td>
+              <td class="p-1.5 font-bold text-amber-900">Ses. 03 o 04</td>
+              <td class="p-1.5 font-bold text-amber-900">Digitoys 2.5D</td>
+              <td class="p-1.5 text-slate-700">
+                <strong>Hito 1:</strong> Laminado e impresión 3D en vivo de las primeras piezas.
               </td>
-              <td class="p-2 text-center">
-                <span class="inline-block px-1.5 py-0.5 rounded font-bold text-[9px] bg-amber-200 text-amber-900">🚚 Impresora 3D en Aula</span>
+              <td class="p-1.5 text-center">
+                <span class="inline-block px-1.5 py-0.5 rounded font-bold text-[8.5px] bg-amber-200 text-amber-900">🚚 Impresora 3D en aula</span>
               </td>
             </tr>
 
             <tr>
-              <td class="p-2 font-bold text-slate-900 bg-slate-50/50">Sem 3</td>
-              <td class="p-2 text-slate-600">Ses. 05 y 06</td>
-              <td class="p-2 font-semibold text-orange-600">Digitoys 2.5D</td>
-              <td class="p-2 text-slate-600">Fase de acabado, pintado de detalles con rotuladores de precisión, montaje sobre base de exhibición y entrega de Proyecto 1.</td>
-              <td class="p-2 text-center text-slate-400 font-medium">Solo Computadoras</td>
+              <td class="p-1.5 font-bold text-slate-900 bg-slate-50/50">Semana 3</td>
+              <td class="p-1.5 text-slate-600">Ses. 05 y 06</td>
+              <td class="p-1.5 font-semibold text-orange-600">Digitoys 2.5D</td>
+              <td class="p-1.5 text-slate-600">Fase de acabado, pintado de detalles, montaje sobre base y entrega.</td>
+              <td class="p-1.5 text-center text-slate-400 font-medium">Solo computadoras</td>
             </tr>
 
             <tr>
-              <td class="p-2 font-bold text-slate-900 bg-slate-50/50">Sem 4</td>
-              <td class="p-2 text-slate-600">Ses. 07 y 08</td>
-              <td class="p-2 font-semibold text-cyan-700">Diorama MDF</td>
-              <td class="p-2 text-slate-600">Diseño vectorial de planos de profundidad, encajes mecánicos y capas.</td>
-              <td class="p-2 text-center text-slate-400 font-medium">Solo Computadoras</td>
+              <td class="p-1.5 font-bold text-slate-900 bg-slate-50/50">Semana 4</td>
+              <td class="p-1.5 text-slate-600">Ses. 07 y 08</td>
+              <td class="p-1.5 font-semibold text-cyan-700">Diorama MDF</td>
+              <td class="p-1.5 text-slate-600">Planimetría digital de planos de profundidad y encajes mecánicos.</td>
+              <td class="p-1.5 text-center text-slate-400 font-medium">Solo computadoras</td>
             </tr>
 
             <tr class="bg-cyan-50/50 border-l-4 border-l-cyan-600">
-              <td class="p-2 font-bold text-cyan-900">Sem 5</td>
-              <td class="p-2 font-bold text-cyan-900">Ses. 09 o 10</td>
-              <td class="p-2 font-bold text-cyan-900">Diorama MDF</td>
-              <td class="p-2 text-slate-700">
-                <strong>HITO 2:</strong> Demostración y corte de las planchas de madera MDF en aula con cortadora láser de diodo.
+              <td class="p-1.5 font-bold text-cyan-900">Semana 5</td>
+              <td class="p-1.5 font-bold text-cyan-900">Ses. 09 o 10</td>
+              <td class="p-1.5 font-bold text-cyan-900">Diorama MDF</td>
+              <td class="p-1.5 text-slate-700">
+                <strong>Hito 2:</strong> Demostración y corte de láminas de madera MDF en aula.
               </td>
-              <td class="p-2 text-center">
-                <span class="inline-block px-1.5 py-0.5 rounded font-bold text-[9px] bg-cyan-200 text-cyan-900">🚚 Cortadora Láser en Aula</span>
+              <td class="p-1.5 text-center">
+                <span class="inline-block px-1.5 py-0.5 rounded font-bold text-[8.5px] bg-cyan-200 text-cyan-900">🚚 Cortadora láser de diodo</span>
               </td>
             </tr>
 
             <tr>
-              <td class="p-2 font-bold text-slate-900 bg-slate-50/50">Sem 6</td>
-              <td class="p-2 text-slate-600">Ses. 11</td>
-              <td class="p-2 font-semibold text-cyan-700">Diorama MDF</td>
-              <td class="p-2 text-slate-600">Pintado de capas y detalles con rotuladores acrílicos, ensamblado estructural y control de calidad.</td>
-              <td class="p-2 text-center text-slate-400 font-medium">Solo Computadoras</td>
+              <td class="p-1.5 font-bold text-slate-900 bg-slate-50/50">Semana 6</td>
+              <td class="p-1.5 text-slate-600">Ses. 11</td>
+              <td class="p-1.5 font-semibold text-cyan-700">Diorama MDF</td>
+              <td class="p-1.5 text-slate-600">Pintado de capas con rotuladores acrílicos y ensamble estructural.</td>
+              <td class="p-1.5 text-center text-slate-400 font-medium">Solo computadoras</td>
             </tr>
 
             <tr class="bg-emerald-50/60 border-l-4 border-l-emerald-600 font-medium">
-              <td class="p-2 font-bold text-emerald-950">Sem 6</td>
-              <td class="p-2 font-bold text-emerald-950">Ses. 12 (Cierre)</td>
-              <td class="p-2 font-bold text-emerald-950">Cierre & Entrega</td>
-              <td class="p-2 text-slate-800">
-                <strong>HITO 3:</strong> Demostración interactiva de fabricación, puesta en común y entrega física.
+              <td class="p-1.5 font-bold text-emerald-950">Semana 6</td>
+              <td class="p-1.5 font-bold text-emerald-950">Ses. 12 (Cierre)</td>
+              <td class="p-1.5 font-bold text-emerald-950">Cierre del ciclo</td>
+              <td class="p-1.5 text-slate-800">
+                <strong>Hito 3:</strong> Demostración interactiva, puesta en común y entrega física final.
               </td>
-              <td class="p-2 text-center">
-                <span class="inline-block px-1.5 py-0.5 rounded font-bold text-[9px] bg-emerald-200 text-emerald-900">🚚 Láser + 3D (Cierre)</span>
+              <td class="p-1.5 text-center">
+                <span class="inline-block px-1.5 py-0.5 rounded font-bold text-[8.5px] bg-emerald-200 text-emerald-900">🚚 Láser + 3D (Cierre)</span>
               </td>
             </tr>
 
@@ -384,111 +387,105 @@
       </div>
     </div>
 
-    <!-- 5. REQUERIMIENTOS BÁSICOS DEL AULA -->
-    <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-1">
-      <div class="font-bold text-slate-900 text-[11px] flex items-center gap-1.5">
-        <span>🏢</span> Requerimientos Básicos Provistos por la Sede:
+    <!-- 5. ESTRUCTURA ECONÓMICA Y COFINANCIAMIENTO TINKILAB -->
+    <div class="space-y-1.5">
+      <div class="flex items-center justify-between">
+        <h2 class="font-display font-bold text-xs text-slate-900 flex items-center gap-2">
+          <span class="w-4 h-4 rounded bg-emerald-600 text-white flex items-center justify-center text-[9px] font-bold">5</span>
+          Presupuesto de inversión institucional (grupo de hasta 20 participantes)
+        </h2>
+        <span class="text-[9.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+          Subvención técnica aplicada: 22%
+        </span>
       </div>
-      <p class="text-[10.5px] text-slate-600 leading-relaxed">
-        <strong>Computadoras:</strong> Laptops o PCs de escritorio con navegador web Google Chrome y conexión a internet básica (1 equipo por participante o por pareja de trabajo). <strong>Aula:</strong> Mesas, sillas y tomas de corriente convencionales 220V.
-      </p>
-    </div>
 
-    <!-- 6. ESTRUCTURA ECONÓMICA DESGLOSADA CON SUBYTOTOTALES -->
-    <div class="space-y-2.5">
-      <h2 class="font-display font-bold text-sm text-slate-900 flex items-center gap-2">
-        <span class="w-5 h-5 rounded-md bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold">5</span>
-        Presupuesto & Plan de Inversión Proyectado (Grupo de hasta 20 Participantes)
-      </h2>
-
-      <div class="border border-slate-200 rounded-xl overflow-hidden shadow-xs text-xs">
+      <div class="border border-slate-200 rounded-xl overflow-hidden text-xs">
         <table class="w-full text-left border-collapse">
           <thead>
-            <tr class="bg-slate-100 text-slate-700 text-[10px] font-bold border-b border-slate-200 uppercase">
-              <th class="p-2">Concepto</th>
-              <th class="p-2">Detalle Técnico & Métricas</th>
-              <th class="p-2 text-center">Unidad / Cant.</th>
-              <th class="p-2 text-right">Tarifa Unitaria</th>
-              <th class="p-2 text-right">Subtotal</th>
+            <tr class="bg-slate-100 text-slate-700 text-[9.5px] font-bold border-b border-slate-200 uppercase">
+              <th class="p-1.5">Concepto</th>
+              <th class="p-1.5">Detalle técnico</th>
+              <th class="p-1.5 text-right">Valor de mercado</th>
+              <th class="p-1.5 text-right text-tinki-cyanDark">Aporte tinkiLab</th>
+              <th class="p-1.5 text-right">Inversión final</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-slate-200 text-[10.5px]">
+          <tbody class="divide-y divide-slate-200 text-[10px]">
             
             <!-- Docencia -->
             <tr>
-              <td class="p-2 font-bold text-slate-900">Docencia en Aula (Dupla de Tutores)</td>
-              <td class="p-2 text-slate-600">
-                2 tutores en aula para ratio de 1 tutor cada 8-10 alumnos. Emisión mediante Recibo por Honorarios Electrónico (RHE).
+              <td class="p-1.5 font-bold text-slate-900">Docencia en aula (dupla técnica)</td>
+              <td class="p-1.5 text-slate-600">
+                18 horas aula con 2 tutores en simultáneo (S/. 200/h neto por tutor). RHE.
               </td>
-              <td class="p-2 text-center text-slate-600">24 horas aula<br><span class="text-[9px] text-slate-400">(12 ses. × 2h)</span></td>
-              <td class="p-2 text-right font-medium text-slate-700 whitespace-nowrap">
-                S/. 400.00 netos / h<br>
-                <span class="text-[9px] text-slate-400">(S/. 200/h por tutor)</span>
-              </td>
-              <td class="p-2 text-right font-bold text-slate-900 whitespace-nowrap">
-                S/. 9,600.00*
+              <td class="p-1.5 text-right text-slate-400 line-through">S/. 9,000.00</td>
+              <td class="p-1.5 text-right font-semibold text-tinki-cyanDark">- S/. 1,800.00</td>
+              <td class="p-1.5 text-right font-bold text-slate-900 whitespace-nowrap">
+                S/. 7,200.00
               </td>
             </tr>
 
             <!-- Maquinaria & Fabricación Distribuida -->
             <tr class="bg-slate-50/50">
-              <td class="p-2 font-bold text-slate-900">Maquinaria & Fabricación Distribuida</td>
-              <td class="p-2 text-slate-600">
-                Uso en aula + <strong>80 horas máquina 3D</strong> (4h/alumno) y <strong>20 horas de cortadora láser de diodo</strong> (1h/alumno) ejecutadas en modalidad distribuida (taller tinkiLab + aula), cubriendo desgaste y mantenimiento.
+              <td class="p-1.5 font-bold text-slate-900">Maquinaria y fabricación distribuida</td>
+              <td class="p-1.5 text-slate-600">
+                Uso en aula + 80h impresión 3D y 20h corte láser (taller + aula), desgaste y calibración.
               </td>
-              <td class="p-2 text-center text-slate-600">Tarifa plana ciclo</td>
-              <td class="p-2 text-right font-medium text-slate-700 whitespace-nowrap">S/. 1,000.00</td>
-              <td class="p-2 text-right font-bold text-slate-900 whitespace-nowrap">
+              <td class="p-1.5 text-right text-slate-400 line-through">S/. 1,600.00</td>
+              <td class="p-1.5 text-right font-semibold text-tinki-cyanDark">- S/. 600.00</td>
+              <td class="p-1.5 text-right font-bold text-slate-900 whitespace-nowrap">
                 S/. 1,000.00
               </td>
             </tr>
 
             <!-- Campus Virtual -->
             <tr>
-              <td class="p-2 font-bold text-slate-900">Acceso a Plataforma E-Learning</td>
-              <td class="p-2 text-slate-600">
-                Cuentas individuales de acceso al campus virtual por 6 semanas, guías interactivas multimedia y repositorio de archivos 3D/SVG.
+              <td class="p-1.5 font-bold text-slate-900">Licencias campus virtual e-learning</td>
+              <td class="p-1.5 text-slate-600">
+                20 cuentas individuales, guías multimedia y repositorio de archivos por 6 semanas.
               </td>
-              <td class="p-2 text-center text-slate-600">20 participantes</td>
-              <td class="p-2 text-right font-medium text-slate-700 whitespace-nowrap">S/. 30.00 / alumno</td>
-              <td class="p-2 text-right font-bold text-slate-900 whitespace-nowrap">
+              <td class="p-1.5 text-right text-slate-400 line-through">S/. 1,000.00</td>
+              <td class="p-1.5 text-right font-semibold text-tinki-cyanDark">- S/. 400.00</td>
+              <td class="p-1.5 text-right font-bold text-slate-900 whitespace-nowrap">
                 S/. 600.00
               </td>
             </tr>
 
             <!-- Materiales -->
             <tr class="bg-slate-50/50">
-              <td class="p-2 font-bold text-slate-900">Materiales Físicos de Consumo</td>
-              <td class="p-2 text-slate-600">
-                <strong>100 planchas MDF</strong> (268 × 358 mm, 5 por alumno a S/. 1.00 c/u = S/. 100), <strong>3 bobinas filamento PLA</strong> 1kg (S/. 225) y dotación de <strong>20 a 24 marcadores acrílicos Uni POSCA</strong> compartidos (S/. 380) + bases y acabados.
+              <td class="p-1.5 font-bold text-slate-900">Kit integral de materiales de consumo</td>
+              <td class="p-1.5 text-slate-600">
+                Láminas MDF a medida, filamentos PLA de colores, marcadores acrílicos y bases.
               </td>
-              <td class="p-2 text-center text-slate-600">20 kits completos</td>
-              <td class="p-2 text-right font-medium text-slate-700 whitespace-nowrap">~S/. 37.50 / alumno</td>
-              <td class="p-2 text-right font-bold text-slate-900 whitespace-nowrap">
+              <td class="p-1.5 text-right text-slate-700">S/. 750.00</td>
+              <td class="p-1.5 text-right text-slate-400 text-center">—</td>
+              <td class="p-1.5 text-right font-bold text-slate-900 whitespace-nowrap">
                 S/. 750.00
               </td>
             </tr>
 
             <!-- Movilidad -->
             <tr>
-              <td class="p-2 font-bold text-slate-900">Movilidad de Maquinaria</td>
-              <td class="p-2 text-slate-600">
-                3 traslados seguros de ida y vuelta para las sesiones programadas (Sesión 3/4, Sesión 9/10 y Sesión 12).
+              <td class="p-1.5 font-bold text-slate-900">Logística y movilidad de maquinaria</td>
+              <td class="p-1.5 text-slate-600">
+                3 traslados seguros ida y vuelta para las sesiones programadas (S/. 80 c/u).
               </td>
-              <td class="p-2 text-center text-slate-600">3 traslados</td>
-              <td class="p-2 text-right font-medium text-slate-700 whitespace-nowrap">S/. 80.00 / traslado</td>
-              <td class="p-2 text-right font-bold text-slate-900 whitespace-nowrap">
+              <td class="p-1.5 text-right text-slate-700">S/. 240.00</td>
+              <td class="p-1.5 text-right text-slate-400 text-center">—</td>
+              <td class="p-1.5 text-right font-bold text-slate-900 whitespace-nowrap">
                 S/. 240.00
               </td>
             </tr>
 
-            <!-- TOTAL GENERAL PROYECTADO -->
-            <tr class="bg-emerald-50/70 border-t-2 border-emerald-500 font-bold">
-              <td colspan="4" class="p-2.5 text-slate-900 text-[11px] text-right uppercase tracking-wider">
-                Total Inversión Proyectada (Ciclo Completo • 20 Alumnos • 24h de Aula):
+            <!-- TOTAL GENERAL CON RESUMEN DE AHORRO -->
+            <tr class="bg-emerald-50/80 border-t-2 border-emerald-600 font-bold">
+              <td colspan="2" class="p-2 text-slate-900 text-[10.5px] uppercase tracking-wider">
+                Inversión total proyectada (18 horas de aula • 20 participantes):
               </td>
-              <td class="p-2.5 text-right font-display font-extrabold text-sm text-emerald-800 whitespace-nowrap">
-                S/. 12,190.00
+              <td class="p-2 text-right text-slate-400 line-through text-[10.5px]">S/. 12,590.00</td>
+              <td class="p-2 text-right font-bold text-tinki-cyanDark text-[10.5px] whitespace-nowrap">- S/. 2,800.00</td>
+              <td class="p-2 text-right font-display font-extrabold text-sm text-emerald-800 whitespace-nowrap">
+                S/. 9,790.00
               </td>
             </tr>
 
@@ -497,12 +494,12 @@
       </div>
 
       <!-- Notas Finales -->
-      <div class="p-2 rounded-lg bg-slate-50 border border-slate-200 text-[9.5px] text-slate-600 space-y-1">
+      <div class="p-2 rounded-lg bg-slate-50 border border-slate-200 text-[9px] text-slate-600 space-y-1">
         <p>
-          <strong>* Alternativa de Duración de Sesión:</strong> En caso de estructurarse sesiones de <strong>1.5 horas</strong> (18 horas de aula en total), la docencia es de S/. 7,200.00, situando el <strong>Total General en S/. 9,790.00</strong>.
+          <strong>Requerimientos de sede:</strong> Computadoras (laptops o PCs de escritorio) con Google Chrome y Wi-Fi básico (1 por participante o pareja), mesas, sillas y tomas 220V.
         </p>
         <p>
-          <strong>Condiciones de Emisión:</strong> Los honorarios docentes se emiten mediante Recibo por Honorarios Electrónico (RHE) según la normativa tributaria vigente (con suspensión de 4ta categoría o retención de ley correspondiente).
+          <strong>Condiciones de emisión:</strong> Los honorarios docentes se emiten mediante Recibo por Honorarios Electrónico (RHE) según normativa tributaria vigente (con suspensión de 4ta categoría o retención de ley correspondiente).
         </p>
         <p>
           <strong>Escalabilidad:</strong> Para grupos mayores a 20 participantes simultáneos, se contempla la incorporación de tutores adicionales o la apertura de turnos alternos (ej. turno mañana y turno tarde).
@@ -511,7 +508,7 @@
     </div>
 
     <!-- Contacto Directo -->
-    <div class="pt-3 border-t border-slate-200 flex items-center justify-between text-[11px] text-slate-600">
+    <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-[10.5px] text-slate-600">
       <div>
         <strong class="text-slate-900">Henry Sánchez</strong> • Director tinkiLab • <a href="mailto:hola@tinkilab.com" class="hover:underline">hola@tinkilab.com</a>
       </div>
