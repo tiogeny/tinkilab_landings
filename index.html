@@ -74,10 +74,12 @@
       </div>
 
       <!-- Menú Esencial de Navegación -->
-      <nav class="hidden md:flex items-center gap-8 text-xs sm:text-sm font-semibold text-slate-600">
+      <nav class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-semibold text-slate-600">
         <a href="#solucion" class="hover:text-tinki-red transition">¿Por qué tinkiLab?</a>
         <a href="#rutas" class="hover:text-tinki-red transition">Programas</a>
-        <a href="#proyectos" class="hover:text-tinki-red transition">Experiencias</a>
+        <a href="#metodologia" class="hover:text-tinki-red transition">Metodología</a>
+        <a href="#formatos" class="hover:text-tinki-red transition">In-company</a>
+        <a href="#respaldo" class="hover:text-tinki-red transition">Acreditación</a>
       </nav>
 
       <!-- Botón de Contacto Rápido WhatsApp -->
@@ -125,42 +127,50 @@
             </a>
           </div>
 
-          <!-- 4 Pilares Simétricos en Tarjetas (Pill Cards) -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
+          <!-- 4 Pilares Simétricos en Tarjetas Calibradas -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 items-stretch">
             
             <!-- Pilar 1 -->
-            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs space-y-1">
-              <div class="w-6 h-6 rounded-lg bg-red-50 text-tinki-red flex items-center justify-center">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs flex flex-col justify-between space-y-1.5">
+              <div class="space-y-1">
+                <div class="w-6 h-6 rounded-lg bg-red-50 text-tinki-red flex items-center justify-center">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-[11px] text-slate-900 leading-tight">Cero compra de máquinas</h3>
               </div>
-              <h3 class="font-display font-bold text-[11px] text-slate-900 leading-tight">Cero compra de máquinas</h3>
               <p class="text-[10px] text-slate-500 leading-snug">Sin gasto en equipos ni repuestos</p>
             </div>
 
             <!-- Pilar 2 -->
-            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs space-y-1">
-              <div class="w-6 h-6 rounded-lg bg-blue-50 text-tinki-cyanDark flex items-center justify-center">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs flex flex-col justify-between space-y-1.5">
+              <div class="space-y-1">
+                <div class="w-6 h-6 rounded-lg bg-blue-50 text-tinki-cyanDark flex items-center justify-center">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-[11px] text-slate-900 leading-tight">Graduados Fab Academy</h3>
               </div>
-              <h3 class="font-display font-bold text-[11px] text-slate-900 leading-tight">Graduados Fab Academy</h3>
               <p class="text-[10px] text-slate-500 leading-snug">Dirección con diploma oficial</p>
             </div>
 
             <!-- Pilar 3 -->
-            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs space-y-1">
-              <div class="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs flex flex-col justify-between space-y-1.5">
+              <div class="space-y-1">
+                <div class="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-[11px] text-slate-900 leading-tight">Operación 100% incluida</h3>
               </div>
-              <h3 class="font-display font-bold text-[11px] text-slate-900 leading-tight">Operación 100%<br>incluida</h3>
-              <p class="text-[10px] text-slate-500 leading-snug">Equipos, insumos y software maker</p>
+              <p class="text-[10px] text-slate-500 leading-snug">Equipos, insumos y software libre</p>
             </div>
 
             <!-- Pilar 4 -->
-            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs space-y-1">
-              <div class="w-6 h-6 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-xs flex flex-col justify-between space-y-1.5">
+              <div class="space-y-1">
+                <div class="w-6 h-6 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-[11px] text-slate-900 leading-tight">Proyectos físicos tangibles</h3>
               </div>
-              <h3 class="font-display font-bold text-[11px] text-slate-900 leading-tight">Proyectos físicos<br>tangibles</h3>
               <p class="text-[10px] text-slate-500 leading-snug">Cada participante crea su pieza</p>
             </div>
 
@@ -256,107 +266,28 @@
     </div>
   </section>
 
-  <!-- 3. LAS DOS LÍNEAS DE NEGOCIO -->
+  <!-- 3. PORTAFOLIO CORPORATIVO UNIFICADO: PROGRAMAS Y EXPERIENCIAS SEGÚN TU OBJETIVO -->
   <section id="rutas" class="py-12 bg-slate-50/70 border-b border-slate-200">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
       
-      <div class="text-center space-y-1 max-w-2xl mx-auto">
-        <span class="text-xs font-bold uppercase tracking-wider text-tinki-cyanDark">Portafolio Corporativo</span>
-        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900">
-          Dos programas diseñados<br>para las necesidades de tu organización
-        </h2>
-        <p class="text-xs text-slate-600">
-          Experiencias prácticas de alto impacto: integración para tus equipos o bienestar para las familias de tus colaboradores.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        
-        <!-- OPCIÓN A: LÍNEA PRO / ADULTOS (TEAM BUILDING) -->
-        <div class="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col justify-between shadow-xs space-y-4 hover:border-red-300 transition">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded text-[10.5px] font-bold bg-red-50 text-tinki-red uppercase">
-                Equipos & Clima Laboral
-              </span>
-              <span class="text-[11px] text-slate-400 font-medium">Equipos y áreas</span>
-            </div>
-            <h3 class="font-display font-extrabold text-lg text-slate-900">
-              Línea Pro: Team Building & Innovación
-            </h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Jornadas prácticas de co-creación y trabajo colaborativo. Los participantes diseñan y ensamblan prototipos físicos combinando corte láser de alta precisión e impresión 3D, resolviendo retos de innovación a la medida de tu cultura corporativa.
-            </p>
-            <div class="text-xs text-slate-600 space-y-1.5 pt-1">
-              <div class="flex items-center gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Formatos:</strong> Jornadas intensivas (3 a 4 horas) o bootcamps modulares multisesión.</span></div>
-              <div class="flex items-center gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Tecnología:</strong> Corte láser e impresión 3D operadas en vivo en tu sede.</span></div>
-              <div class="flex items-center gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Entregable:</strong> Prototipos funcionales grupales y pitch de validación.</span></div>
-            </div>
-          </div>
-          <div class="pt-3 border-t border-slate-100">
-            <a href="https://wa.me/51934819501?text=Hola%20Henry,%20me%20gustar%C3%ADa%20cotizar%20un%20workshop%20de%20Team%20Building%20e%20Innovaci%C3%B3n%20para%20nuestro%20equipo." target="_blank" class="w-full py-2.5 rounded-xl bg-tinki-red hover:bg-tinki-redHover text-white font-bold text-xs transition flex items-center justify-center gap-2">
-              <span>Consultar Team Building</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- OPCIÓN B: LÍNEA KIDS (BENEFICIO FAMILIAR) -->
-        <div class="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col justify-between shadow-xs space-y-4 hover:border-orange-300 transition">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded text-[10.5px] font-bold bg-orange-50 text-orange-600 uppercase">
-                Beneficio Familiar
-              </span>
-              <span class="text-[11px] text-slate-400 font-medium">7 a 15 años</span>
-            </div>
-            <h3 class="font-display font-extrabold text-lg text-slate-900">
-              Línea Kids: Club de Creadores STEAM
-            </h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Un beneficio corporativo de alto valor percibido para los hijos de tus colaboradores. Aprenden modelado 3D, corte láser y metodologías STEAM con software de diseño libre en la nube y cero compra de maquinaria para la empresa.
-            </p>
-            <div class="text-xs text-slate-600 space-y-1.5 pt-1">
-              <div class="flex items-center gap-1.5"><span class="text-orange-500 font-bold">✓</span> <span><strong>Formatos adaptables:</strong> Desde talleres de fin de semana hasta programas vacacionales completos.</span></div>
-              <div class="flex items-center gap-1.5"><span class="text-orange-500 font-bold">✓</span> <span><strong>Creaciones tangibles:</strong> Prototipos físicos de autor (impresión 3D y corte láser en madera).</span></div>
-              <div class="flex items-center gap-1.5"><span class="text-orange-500 font-bold">✓</span> <span><strong>Clausura:</strong> Demo Day familiar con diplomas oficiales.</span></div>
-            </div>
-          </div>
-          <div class="pt-3 border-t border-slate-100">
-            <a href="https://wa.me/51934819501?text=Hola%20Henry,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20el%20programa%20vacacional%20STEAM%20para%20hijos%20de%20colaboradores." target="_blank" class="w-full py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs transition flex items-center justify-center gap-2">
-              <span>Consultar Programa STEAM Kids</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 4. EXPERIENCIAS Y PROYECTOS SEGÚN TU OBJETIVO -->
-  <section id="proyectos" class="py-12 bg-white border-b border-slate-200">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
-      
       <div class="text-center space-y-1.5 max-w-2xl mx-auto">
-        <span class="text-xs font-bold text-tinki-red uppercase tracking-widest">Catálogo de experiencias</span>
-        <h2 class="font-display text-2xl font-extrabold text-slate-900 leading-snug">
-          Experiencias maker y proyectos según tu público objetivo
+        <span class="text-xs font-bold uppercase tracking-wider text-tinki-cyanDark">Portafolio corporativo</span>
+        <h2 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900 leading-snug">
+          Dos programas diseñados para las necesidades de tu organización
         </h2>
-        <p class="text-slate-600 text-xs sm:text-sm">
-          Soluciones prácticas y modulares diseñadas para fortalecer equipos de trabajo o enriquecer a las familias de tus colaboradores.
+        <p class="text-xs sm:text-sm text-slate-600">
+          Experiencias prácticas y modulares para fortalecer a tus equipos de trabajo o brindar un beneficio educativo a las familias de tus colaboradores.
         </p>
       </div>
 
       <div class="space-y-6 max-w-5xl mx-auto">
         
-        <!-- TARJETA 1: WORKSHOPS DE TEAM BUILDING (LÍNEA PRO / ADULTOS) -->
-        <div class="rounded-2xl bg-slate-50 border border-slate-200 shadow-xs overflow-hidden">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-0 items-center">
+        <!-- PROGRAMA 1: LÍNEA PRO / ADULTOS (TEAM BUILDING E INNOVACIÓN) -->
+        <div class="rounded-2xl bg-white border border-slate-200 hover:border-red-300 transition shadow-xs overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-0 items-stretch">
             
             <!-- Columna Imagen (Sin personas, prototipo híbrido 3D + corte láser) -->
-            <div class="md:col-span-5 aspect-video md:aspect-auto md:h-full relative overflow-hidden bg-slate-100 min-h-[250px]">
+            <div class="md:col-span-5 aspect-video md:aspect-auto relative overflow-hidden bg-slate-100 min-h-[260px]">
               <img src="assets/images/team-building-maker.jpg" alt="Mesa de taller Team Building con estructura en corte láser, piezas impresas en 3D y diseño en pantalla" class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent md:hidden"></div>
               <span class="absolute bottom-3 left-3 md:hidden px-2.5 py-0.5 rounded text-[10px] font-bold bg-white/90 text-slate-800 backdrop-blur-xs">
@@ -365,25 +296,30 @@
             </div>
 
             <!-- Columna Contenido -->
-            <div class="md:col-span-7 p-6 sm:p-7 space-y-3 text-left">
-              <div class="flex items-center justify-between">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-red-50 text-tinki-red border border-red-200 uppercase">
-                  <span>🏢</span> Línea Pro • Equipos & Clima Laboral
-                </span>
-                <span class="text-[11px] font-semibold text-slate-500">Formatos de 3h a varias fechas</span>
-              </div>
-              <h3 class="font-display font-extrabold text-base sm:text-lg text-slate-900 leading-snug">
-                Workshops de Team Building: Retos maker de innovación y co-creación a medida
-              </h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Una experiencia práctica y colaborativa donde los equipos se desconectan de la rutina de oficina. A través de retos maker de diseño y ensamble (corte láser e impresión 3D), tus colaboradores resuelven desafíos creativos juntos, fortaleciendo la comunicación, la integración y el trabajo en equipo de forma ágil, tangible y entretenida.
-              </p>
-              <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-slate-200">
-                <div class="text-[11px] font-semibold text-slate-600 space-y-0.5">
-                  <div>✓ Dinámicas intensivas de medio día (3 a 4h) o bootcamps modulares</div>
-                  <div>✓ Impresoras 3D, cortadora láser y materiales trasladados a tu sede</div>
+            <div class="md:col-span-7 p-6 sm:p-7 flex flex-col justify-between space-y-4 text-left">
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10.5px] font-bold bg-red-50 text-tinki-red border border-red-200">
+                    <span>🏢</span> Línea Pro • Equipos y clima laboral
+                  </span>
+                  <span class="text-[11px] font-semibold text-slate-500">Equipos y áreas</span>
                 </div>
-                <a href="https://wa.me/51934819501?text=Hola%20Henry,%20quiero%20cotizar%20un%20reto%20a%20medida%20de%20Team%20Building%20para%20mi%20empresa." target="_blank" class="px-4 py-2.5 rounded-xl bg-tinki-red hover:bg-tinki-redHover text-white font-bold text-xs shadow-xs transition whitespace-nowrap flex items-center gap-1.5 flex-shrink-0">
+                <h3 class="font-display font-extrabold text-base sm:text-lg text-slate-900 leading-snug">
+                  Workshops de Team Building: Retos maker de innovación y co-creación
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Una experiencia práctica y colaborativa donde los equipos se desconectan de la rutina de oficina. A través de retos maker de diseño y ensamble (corte láser e impresión 3D), tus colaboradores resuelven desafíos creativos juntos, fortaleciendo la comunicación, la integración y el trabajo en equipo de forma ágil, tangible y entretenida.
+                </p>
+                <div class="text-xs text-slate-600 space-y-1.5 pt-1">
+                  <div class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Formatos:</strong> Jornadas intensivas de medio día (3 a 4 horas) o bootcamps multisesión.</span></div>
+                  <div class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Tecnología en sede:</strong> Impresoras 3D, cortadora láser e insumos trasladados a tu empresa.</span></div>
+                  <div class="flex items-start gap-1.5"><span class="text-tinki-red font-bold">✓</span> <span><strong>Entregable:</strong> Prototipos físicos colaborativos y dinámica de presentación final.</span></div>
+                </div>
+              </div>
+
+              <div class="pt-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-slate-100">
+                <span class="text-[11px] font-semibold text-slate-500">Adaptable a grupos y objetivos corporativos</span>
+                <a href="https://wa.me/51934819501?text=Hola%20Henry,%20quiero%20cotizar%20un%20workshop%20de%20Team%20Building%20para%20mi%20empresa." target="_blank" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-tinki-red hover:bg-tinki-redHover text-white font-bold text-xs shadow-xs transition whitespace-nowrap flex items-center justify-center gap-1.5 flex-shrink-0">
                   <span>Cotizar Team Building</span>
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
@@ -393,12 +329,12 @@
           </div>
         </div>
 
-        <!-- TARJETA 2: PROGRAMAS VACACIONALES STEAM (LÍNEA KIDS / HIJOS DE COLABORADORES) -->
-        <div class="rounded-2xl bg-white border border-slate-200 shadow-xs overflow-hidden">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-0 items-center">
+        <!-- PROGRAMA 2: LÍNEA KIDS / HIJOS DE COLABORADORES (CLUB DE CREADORES STEAM) -->
+        <div class="rounded-2xl bg-white border border-slate-200 hover:border-orange-300 transition shadow-xs overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-0 items-stretch">
             
             <!-- Columna Imagen (Digitoys de Ingenio sin personas) -->
-            <div class="md:col-span-5 aspect-video md:aspect-auto md:h-full relative overflow-hidden bg-slate-100 min-h-[250px]">
+            <div class="md:col-span-5 aspect-video md:aspect-auto relative overflow-hidden bg-slate-100 min-h-[260px]">
               <img src="assets/images/proyecto_1.png" alt="Colección de personajes Digitoys 2.5D en estudio STEAM Maker Space con credencial Maker ID" class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent md:hidden"></div>
               <span class="absolute bottom-3 left-3 md:hidden px-2.5 py-0.5 rounded text-[10px] font-bold bg-white/90 text-slate-800 backdrop-blur-xs">
@@ -407,26 +343,31 @@
             </div>
 
             <!-- Columna Contenido -->
-            <div class="md:col-span-7 p-6 sm:p-7 space-y-3 text-left">
-              <div class="flex items-center justify-between">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-orange-50 text-orange-600 border border-orange-200 uppercase">
-                  <span>🚀</span> Línea Kids • Beneficio Familiar (7 a 15 años)
-                </span>
-                <span class="text-[11px] font-semibold text-emerald-600">Creaciones físicas terminadas</span>
-              </div>
-              <h3 class="font-display font-extrabold text-base sm:text-lg text-slate-900 leading-snug">
-                Club de Creadores STEAM: Laboratorios de fabricación digital para niños y jóvenes
-              </h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Una experiencia práctica donde los participantes descubren el modelado 3D, diseño vectorial y fabricación digital real en un entorno seguro y lúdico. Los formatos se adaptan a la necesidad de la organización: desde jornadas especiales de integración familiar hasta programas vacacionales integrales. Cada participante materializa y se lleva a casa creaciones físicas terminadas (esculturas 3D, dioramas multicapa en madera o retos maker de autor).
-              </p>
-              <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-slate-200">
-                <div class="text-[11px] font-semibold text-slate-600 space-y-0.5">
-                  <div>✓ Desde talleres de 1 día hasta programas integrales de temporada</div>
-                  <div>✓ Cada participante crea y se lleva piezas físicas a casa con Demo Day</div>
+            <div class="md:col-span-7 p-6 sm:p-7 flex flex-col justify-between space-y-4 text-left">
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10.5px] font-bold bg-orange-50 text-orange-600 border border-orange-200">
+                    <span>🚀</span> Línea Kids • Beneficio familiar
+                  </span>
+                  <span class="text-[11px] font-semibold text-slate-500">7 a 15 años</span>
                 </div>
-                <a href="https://wa.me/51934819501?text=Hola%20Henry,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20el%20programa%20vacacional%20STEAM%20para%20hijos%20de%20colaboradores." target="_blank" class="px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs shadow-xs transition whitespace-nowrap flex items-center gap-1.5 flex-shrink-0">
-                  <span>Consultar Programa STEAM Kids</span>
+                <h3 class="font-display font-extrabold text-base sm:text-lg text-slate-900 leading-snug">
+                  Club de Creadores STEAM: Laboratorios de fabricación digital para niños y jóvenes
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Un beneficio corporativo de alto valor percibido para los hijos de tus colaboradores. Descubren el modelado 3D, diseño vectorial y fabricación digital real en un entorno seguro y lúdico, utilizando software libre en la nube y sin compra de maquinaria para la organización.
+                </p>
+                <div class="text-xs text-slate-600 space-y-1.5 pt-1">
+                  <div class="flex items-start gap-1.5"><span class="text-orange-500 font-bold">✓</span> <span><strong>Formatos adaptables:</strong> Desde talleres de 1 día hasta programas vacacionales de temporada.</span></div>
+                  <div class="flex items-start gap-1.5"><span class="text-orange-500 font-bold">✓</span> <span><strong>Creaciones tangibles:</strong> Cada participante fabrica y se lleva a casa piezas propias en 3D y corte láser.</span></div>
+                  <div class="flex items-start gap-1.5"><span class="text-orange-500 font-bold">✓</span> <span><strong>Clausura:</strong> Demo Day familiar con exposición de proyectos y diplomas oficiales.</span></div>
+                </div>
+              </div>
+
+              <div class="pt-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-slate-100">
+                <span class="text-[11px] font-semibold text-emerald-600">Creaciones físicas de autor terminadas</span>
+                <a href="https://wa.me/51934819501?text=Hola%20Henry,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20el%20programa%20STEAM%20para%20hijos%20de%20colaboradores." target="_blank" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs shadow-xs transition whitespace-nowrap flex items-center justify-center gap-1.5 flex-shrink-0">
+                  <span>Consultar programa STEAM Kids</span>
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
               </div>
@@ -440,13 +381,13 @@
     </div>
   </section>
 
-  <!-- 5. METODOLOGÍA: FLUJO MINIMALISTA EN 6 ETAPAS -->
-  <section id="metodologia" class="py-12 bg-slate-50/70 border-b border-slate-200">
+  <!-- 4. METODOLOGÍA: FLUJO MINIMALISTA EN 6 ETAPAS -->
+  <section id="metodologia" class="py-12 bg-white border-b border-slate-200">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-7">
       
       <div class="text-center space-y-1 max-w-2xl mx-auto">
         <span class="text-xs font-bold text-tinki-cyanDark uppercase tracking-widest">
-          Metodología Activa
+          Metodología activa
         </span>
         <h2 class="font-display text-2xl font-extrabold text-slate-900">
           La ruta "Aprender Haciendo" en 6 etapas
@@ -460,7 +401,7 @@
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         
         <!-- 01 Imagina -->
-        <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+        <div class="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
           <div>
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-full bg-red-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">01</span>
@@ -470,14 +411,14 @@
               Ideación y boceto conceptual libre sobre papel.
             </p>
           </div>
-          <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-slate-500 flex items-center gap-1.5">
+          <div class="pt-1.5 border-t border-slate-200/80 text-[9.5px] font-bold text-slate-600 flex items-center gap-1.5">
             <svg class="w-3.5 h-3.5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
             <span>Boceto conceptual</span>
           </div>
         </div>
 
         <!-- 02 Diseña -->
-        <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+        <div class="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
           <div>
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-full bg-orange-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">02</span>
@@ -487,14 +428,14 @@
               Vectorización digital y planos de siluetas en pantalla.
             </p>
           </div>
-          <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-slate-500 flex items-center gap-1.5">
+          <div class="pt-1.5 border-t border-slate-200/80 text-[9.5px] font-bold text-slate-600 flex items-center gap-1.5">
             <svg class="w-3.5 h-3.5 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             <span>Archivo vectorial</span>
           </div>
         </div>
 
         <!-- 03 Modela -->
-        <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+        <div class="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
           <div>
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-full bg-indigo-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">03</span>
@@ -504,14 +445,14 @@
               Volumetría 3D y planos de profundidad en software.
             </p>
           </div>
-          <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-slate-500 flex items-center gap-1.5">
+          <div class="pt-1.5 border-t border-slate-200/80 text-[9.5px] font-bold text-slate-600 flex items-center gap-1.5">
             <svg class="w-3.5 h-3.5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
             <span>Modelo 3D y planos</span>
           </div>
         </div>
 
         <!-- 04 Fabrica -->
-        <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+        <div class="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
           <div>
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-full bg-amber-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">04</span>
@@ -521,14 +462,14 @@
               Fabricación física con impresora 3D o cortadora láser.
             </p>
           </div>
-          <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-slate-500 flex items-center gap-1.5">
+          <div class="pt-1.5 border-t border-slate-200/80 text-[9.5px] font-bold text-slate-600 flex items-center gap-1.5">
             <svg class="w-3.5 h-3.5 text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
             <span>Impresión 3D y láser</span>
           </div>
         </div>
 
         <!-- 05 Detalla -->
-        <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+        <div class="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
           <div>
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-full bg-emerald-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">05</span>
@@ -538,14 +479,14 @@
               Acabado artístico manual y ensamble de piezas.
             </p>
           </div>
-          <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-slate-500 flex items-center gap-1.5">
+          <div class="pt-1.5 border-t border-slate-200/80 text-[9.5px] font-bold text-slate-600 flex items-center gap-1.5">
             <svg class="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4 4 4 0 014-4c2 0 3.5 1.5 3.5 3.5 0 2-1.5 3.5-3.5 3.5zm0 0c2 0 4-2 4-5V4l7 3v4c0 3-2 5-4 5"/></svg>
             <span>Acabado y ensamble</span>
           </div>
         </div>
 
         <!-- 06 Presenta -->
-        <div class="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
+        <div class="p-3.5 rounded-xl bg-slate-50/70 border border-slate-200 space-y-2 flex flex-col justify-between shadow-xs">
           <div>
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-full bg-purple-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">06</span>
@@ -555,7 +496,7 @@
               Validación, exposición del prototipo funcional y Demo Day de cierre.
             </p>
           </div>
-          <div class="pt-1.5 border-t border-slate-100 text-[9.5px] font-bold text-purple-700 whitespace-nowrap flex items-center gap-1.5">
+          <div class="pt-1.5 border-t border-slate-200/80 text-[9.5px] font-bold text-purple-700 whitespace-nowrap flex items-center gap-1.5">
             <svg class="w-3.5 h-3.5 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
             <span>Demo Day + Prototipos</span>
           </div>
@@ -566,8 +507,8 @@
     </div>
   </section>
 
-  <!-- 6. FORMATOS B2B Y MATRIZ DE ROLES UNIFICADA -->
-  <section id="formatos" class="py-12 bg-white border-b border-slate-200">
+  <!-- 5. FORMATOS B2B Y MATRIZ DE ROLES UNIFICADA -->
+  <section id="formatos" class="py-12 bg-slate-50/70 border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-7">
       
       <div class="text-center space-y-1 max-w-2xl mx-auto">
@@ -580,11 +521,11 @@
         </p>
       </div>
 
-      <!-- Matriz de Responsabilidad en Una Sola Tarjeta Dividida -->
-      <div class="grid grid-cols-1 md:grid-cols-2 rounded-2xl border border-slate-200 overflow-hidden shadow-xs divide-y md:divide-y-0 md:divide-x divide-slate-200">
+      <!-- Matriz de Responsabilidad 4x4 Simétrica en Una Sola Tarjeta Dividida -->
+      <div class="grid grid-cols-1 md:grid-cols-2 rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xs divide-y md:divide-y-0 md:divide-x divide-slate-200">
         
-        <!-- Tu Organización -->
-        <div class="p-6 bg-slate-50/60 space-y-3">
+        <!-- Tu Organización (4 ítems) -->
+        <div class="p-6 bg-slate-50/50 space-y-3">
           <div class="flex items-center gap-2">
             <span class="text-base">🏢</span>
             <h4 class="font-display font-bold text-sm text-slate-900">Tu organización facilita:</h4>
@@ -597,7 +538,7 @@
           </ul>
         </div>
 
-        <!-- Nos Encargamos de -->
+        <!-- Nosotros aportamos (4 ítems) -->
         <div class="p-6 bg-white space-y-3">
           <div class="flex items-center gap-2">
             <img src="assets/images/logo-tinkilab.png" alt="tinkiLab" class="h-4 w-auto object-contain">
@@ -616,8 +557,8 @@
     </div>
   </section>
 
-  <!-- 7. RESPALDO INTERNACIONAL: ACREDITACIÓN FAB ACADEMY (FAB FOUNDATION) & TUTORES -->
-  <section id="respaldo" class="py-12 bg-slate-50/70 border-b border-slate-200">
+  <!-- 6. RESPALDO INTERNACIONAL: ACREDITACIÓN FAB ACADEMY (FAB FOUNDATION) & TUTORES -->
+  <section id="respaldo" class="py-12 bg-white border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-6 text-center">
       
       <div class="space-y-1.5 max-w-2xl mx-auto">
@@ -636,14 +577,14 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
         
         <!-- Henry Joel Sánchez Grimaldo -->
-        <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2 flex flex-col justify-between">
+        <div class="p-4 rounded-2xl bg-slate-50/70 border border-slate-200 shadow-xs space-y-2 flex flex-col justify-between">
           <div class="space-y-1.5">
             <div class="flex items-start justify-between gap-2">
               <div>
                 <h3 class="font-display font-bold text-sm text-slate-900 leading-snug">Henry Joel Sánchez Grimaldo</h3>
                 <span class="text-[11px] font-semibold text-tinki-red">Fab Academy 2015</span>
               </div>
-              <a href="https://fabacademy.org/2015/sa/students/sanchez.henry/index.html" target="_blank" class="px-2 py-1 rounded-lg bg-red-50 hover:bg-red-100 text-tinki-red text-[10px] font-bold transition flex items-center gap-1 flex-shrink-0">
+              <a href="https://fabacademy.org/2015/sa/students/sanchez.henry/index.html" target="_blank" class="px-2 py-1 rounded-lg bg-red-50 hover:bg-red-100 text-tinki-red text-[10px] font-bold transition flex items-center gap-1 flex-shrink-0 border border-red-100">
                 <span>Credencial</span>
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
@@ -652,20 +593,20 @@
               Educador maker y director de tinkiLab. Fundador de Digitoys, especialista en metodologías STEAM, modelado 3D y corte láser lúdico.
             </p>
           </div>
-          <div class="pt-2 border-t border-slate-100 text-[10px] text-slate-500 font-medium">
+          <div class="pt-2 border-t border-slate-200/80 text-[10px] text-slate-500 font-medium">
             Fab Academy 2015 • Fab Lab Perú • 10+ años maker
           </div>
         </div>
 
         <!-- María Angela Mejía León -->
-        <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2 flex flex-col justify-between">
+        <div class="p-4 rounded-2xl bg-slate-50/70 border border-slate-200 shadow-xs space-y-2 flex flex-col justify-between">
           <div class="space-y-1.5">
             <div class="flex items-start justify-between gap-2">
               <div>
                 <h3 class="font-display font-bold text-sm text-slate-900 leading-snug">María Angela Mejía León</h3>
                 <span class="text-[11px] font-semibold text-tinki-cyanDark">Fab Academy 2024</span>
               </div>
-              <a href="https://fabacademy.org/2024/labs/lima/students/angela-mejia/" target="_blank" class="px-2 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-tinki-cyanDark text-[10px] font-bold transition flex items-center gap-1 flex-shrink-0">
+              <a href="https://fabacademy.org/2024/labs/lima/students/angela-mejia/" target="_blank" class="px-2 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-tinki-cyanDark text-[10px] font-bold transition flex items-center gap-1 flex-shrink-0 border border-blue-100">
                 <span>Credencial</span>
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
@@ -674,7 +615,7 @@
               Arquitecta y fundadora de FABly. Mentora en innovación maker (Innova Fab Women), especialista en diseño espacial y volumetría 3D.
             </p>
           </div>
-          <div class="pt-2 border-t border-slate-100 text-[10px] text-slate-500 font-medium">
+          <div class="pt-2 border-t border-slate-200/80 text-[10px] text-slate-500 font-medium">
             Fab Academy 2024 • Fab Lab Lima • FABly
           </div>
         </div>
@@ -691,7 +632,7 @@
       </div>
 
       <div class="pt-1">
-        <a href="https://www.youtube.com/playlist?list=PLAeW1pyLvEMi5vMVVY2pvl_xjjlexAD-9" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-bold text-xs transition border border-slate-200 shadow-xs">
+        <a href="https://www.youtube.com/playlist?list=PLAeW1pyLvEMi5vMVVY2pvl_xjjlexAD-9" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold text-xs transition border border-slate-200 shadow-xs">
           <svg class="w-4 h-4 fill-red-600" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           <span>Ver podcast y divulgación técnica (+18 episodios)</span>
         </a>
@@ -700,8 +641,8 @@
     </div>
   </section>
 
-  <!-- 8. CIERRE Y CONTACTO DIRECTO -->
-  <section id="contacto" class="py-12 bg-white">
+  <!-- 7. CIERRE Y CONTACTO DIRECTO -->
+  <section id="contacto" class="py-12 bg-slate-50/70">
     <div class="max-w-xl mx-auto px-4 sm:px-6 text-center space-y-6">
       
       <div class="space-y-1">
@@ -714,7 +655,7 @@
       </div>
 
       <!-- Ficha Ejecutiva Limpia -->
-      <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-xs text-left space-y-4">
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs text-left space-y-4">
         
         <div class="flex items-center gap-3 pb-3 border-b border-slate-200">
           <div class="w-10 h-10 rounded-xl bg-tinki-red text-white flex items-center justify-center font-display font-bold text-sm">
@@ -760,12 +701,14 @@
       <div class="flex items-center gap-3">
         <img src="assets/images/logo-tinkilab.png" alt="tinkiLab" class="h-5 sm:h-6 w-auto object-contain">
         <span class="text-slate-300">•</span>
-        <span class="text-slate-600">Laboratorio de Fabricación Digital & Educación STEAM</span>
+        <span class="text-slate-600">Laboratorio de fabricación digital y educación STEAM</span>
       </div>
-      <div class="flex items-center gap-5 text-[11px] text-slate-500 font-medium">
+      <div class="flex flex-wrap items-center justify-center gap-5 text-[11px] text-slate-500 font-medium">
         <a href="#solucion" class="hover:text-tinki-red transition">¿Por qué tinkiLab?</a>
         <a href="#rutas" class="hover:text-tinki-red transition">Programas</a>
-        <a href="#proyectos" class="hover:text-tinki-red transition">Proyectos</a>
+        <a href="#metodologia" class="hover:text-tinki-red transition">Metodología</a>
+        <a href="#formatos" class="hover:text-tinki-red transition">In-company</a>
+        <a href="#respaldo" class="hover:text-tinki-red transition">Acreditación</a>
         <a href="#contacto" class="hover:text-tinki-red transition">Contacto</a>
       </div>
 
